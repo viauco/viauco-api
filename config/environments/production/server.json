@@ -3,10 +3,10 @@
   "port": "${process.env.PORT || 1337}",
   "production": true,
   "proxy": {
-    "enabled": false
+    "enabled": true
   },
   "cron": {
-    "enabled": false
+    "enabled": true
   },
   "admin": {
     "autoOpen": false,
