@@ -1,0 +1,34 @@
+{
+  "info": {
+    "name": "Settings"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "value": {
+      "type": "text",
+      "required": true,
+      "unique": true
+    },
+    "group": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  },
+  "connection": "default",
+  "collectionName": "settings"
+}

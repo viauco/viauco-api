@@ -599,6 +599,213 @@
                 },
                 "cover": {
                   "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              }
+            }
+          },
+          "color": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "hex": {
+                "type": "string"
+              },
+              "rgb": {
+                "type": "string"
+              },
+              "products": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "like": {
+            "required": [
+              "id",
+              "liked"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "liked": {
+                "type": "boolean"
+              },
+              "product": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "products": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "rating": {
+            "required": [
+              "id",
+              "rate"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "rate": {
+                "type": "number"
+              },
+              "product": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "products": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "review": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "product": {
+                "type": "string"
+              },
+              "review": {
+                "type": "string"
+              },
+              "products": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "size": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "symbol": {
+                "type": "string"
+              },
+              "products": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "price": {
+            "type": "number"
+          },
+          "discount": {
+            "type": "number"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "sapo": {
+            "type": "string"
+          },
+          "tag": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "blogs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "products": {
+                "type": "array",
+                "items": {
+                  "type": "string"
                 }
               }
             }
@@ -618,6 +825,39 @@
             "items": {
               "type": "string"
             }
+          },
+          "user": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "like": {
+            "type": "string"
+          },
+          "rating": {
+            "type": "string"
+          },
+          "review": {
+            "type": "string"
+          },
+          "size": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "discount": {
+            "type": "number"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "sapo": {
+            "type": "string"
+          },
+          "tag": {
+            "type": "string"
           }
         }
       }

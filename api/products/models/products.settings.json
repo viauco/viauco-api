@@ -22,8 +22,48 @@
       "required": false
     },
     "categories": {
-      "via": "product",
-      "collection": "categories"
+      "collection": "categories",
+      "via": "product"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "color": {
+      "model": "colors",
+      "via": "products"
+    },
+    "like": {
+      "model": "likes",
+      "via": "products"
+    },
+    "rating": {
+      "model": "rating",
+      "via": "products"
+    },
+    "review": {
+      "model": "reviews",
+      "via": "products"
+    },
+    "size": {
+      "model": "sizes",
+      "via": "products"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "discount": {
+      "type": "decimal"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "sapo": {
+      "type": "string"
+    },
+    "tag": {
+      "model": "tags",
+      "via": "products"
     }
   }
 }

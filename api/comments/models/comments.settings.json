@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "comments",
+  "info": {
+    "name": "Comments"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "comment": {
+      "via": "comments",
+      "model": "comments"
+    },
+    "comments": {
+      "via": "comment",
+      "collection": "comments"
+    },
+    "blogs": {
+      "via": "comment",
+      "collection": "blogs"
+    }
+  }
+}

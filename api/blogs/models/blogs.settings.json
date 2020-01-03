@@ -1,0 +1,47 @@
+{
+  "info": {
+    "name": "Blogs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "sapo": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "comment": {
+      "model": "comments",
+      "via": "blogs"
+    },
+    "tag": {
+      "model": "tags",
+      "via": "blogs"
+    },
+    "blog_category": {
+      "model": "blog-categories",
+      "via": "blogs"
+    }
+  },
+  "connection": "default",
+  "collectionName": "blogs"
+}

@@ -1,0 +1,26 @@
+{
+  "connection": "default",
+  "collectionName": "tags",
+  "info": {
+    "name": "Tags"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "blogs": {
+      "via": "tag",
+      "collection": "blogs"
+    },
+    "products": {
+      "via": "tag",
+      "collection": "products"
+    }
+  }
+}

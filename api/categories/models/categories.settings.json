@@ -20,14 +20,21 @@
       "type": "richtext"
     },
     "product": {
-      "model": "products",
-      "via": "categories"
+      "via": "categories",
+      "model": "products"
     },
     "cover": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "product",
+        "blog"
+      ]
     }
   }
 }

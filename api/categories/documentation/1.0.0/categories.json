@@ -556,6 +556,39 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "user": {
+                "type": "string"
+              },
+              "color": {
+                "type": "string"
+              },
+              "like": {
+                "type": "string"
+              },
+              "rating": {
+                "type": "string"
+              },
+              "review": {
+                "type": "string"
+              },
+              "size": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "discount": {
+                "type": "number"
+              },
+              "amount": {
+                "type": "number"
+              },
+              "sapo": {
+                "type": "string"
+              },
+              "tag": {
+                "type": "string"
               }
             }
           },
@@ -604,6 +637,13 @@
                 "type": "string"
               }
             }
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "product",
+              "blog"
+            ]
           }
         }
       },
@@ -622,6 +662,13 @@
           },
           "product": {
             "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "product",
+              "blog"
+            ]
           }
         }
       }

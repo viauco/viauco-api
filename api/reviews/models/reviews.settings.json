@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "reviews",
+  "info": {
+    "name": "Reviews"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "product": {
+      "model": "products"
+    },
+    "review": {
+      "model": "reviews"
+    },
+    "products": {
+      "via": "review",
+      "collection": "products"
+    }
+  }
+}
