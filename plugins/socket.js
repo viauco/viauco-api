@@ -1,6 +1,7 @@
-import _ from 'lodash'
+const _ = require('lodash');
 
 module.exports = (server) => {
+    
     const io = require('socket.io')(server);
     var users = [];
     // listen for user connection
