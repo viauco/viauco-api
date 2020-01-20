@@ -1,8 +1,8 @@
 {
   "name": "viauco-api",
   "private": true,
-  "version": "0.1.0",
-  "description": "A Strapi application",
+  "version": "1.0.1",
+  "description": "Api application",
   "scripts": {
     "develop": "strapi develop",
     "dev": "strapi develop",
@@ -27,6 +27,7 @@
     "strapi-plugin-graphql": "3.0.0-beta.18.4",
     "strapi-plugin-upload": "3.0.0-beta.18.4",
     "strapi-plugin-users-permissions": "3.0.0-beta.18.4",
+    "strapi-provider-upload-firebase": "^0.0.4",
     "strapi-utils": "3.0.0-beta.18.4"
   },
   "author": {
