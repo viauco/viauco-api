@@ -12,7 +12,7 @@
         "password": "123456"
       },
       "options": {
-        "debug": true
+        "debug": false
       }
     }
   }

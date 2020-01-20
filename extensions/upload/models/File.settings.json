@@ -37,8 +37,7 @@
       "required": true
     },
     "url": {
-      "type": "string",
-      "maxLength": 1000,
+      "type": "text",
       "configurable": false,
       "required": true
     },
