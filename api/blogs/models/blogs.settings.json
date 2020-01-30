@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "blogs",
   "info": {
     "name": "Blogs"
   },
@@ -7,18 +9,6 @@
     "timestamps": true
   },
   "attributes": {
-    "name": {
-      "type": "string",
-      "required": true
-    },
-    "sapo": {
-      "type": "string",
-      "required": true
-    },
-    "description": {
-      "type": "richtext",
-      "required": true
-    },
     "cover": {
       "model": "file",
       "via": "related",
@@ -29,19 +19,20 @@
       "plugin": "users-permissions",
       "model": "user"
     },
-    "comment": {
-      "model": "comments",
-      "via": "blogs"
+    "comments": {
+      "collection": "comments"
     },
-    "tag": {
-      "model": "tags",
-      "via": "blogs"
+    "tags": {
+      "collection": "tags"
     },
-    "blog_category": {
-      "model": "blog-categories",
-      "via": "blogs"
+    "blog_categories": {
+      "collection": "blog-categories"
+    },
+    "names": {
+      "collection": "translates"
+    },
+    "descriptions": {
+      "collection": "translates"
     }
-  },
-  "connection": "default",
-  "collectionName": "blogs"
+  }
 }

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/04/2020 12:37:16 AM"
+    "x-generation-date": "01/30/2020 4:54:33 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3108,6 +3108,517 @@
         "summary": "",
         "tags": [
           "Contacts"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/languages": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the languages's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve languages document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Languages"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Languages"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new languages record",
+        "responses": {
+          "200": {
+            "description": "Retrieve languages document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Languages"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Languages"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewLanguages"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/languages/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the numver of languages documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve languages document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Languages"
+        ],
+        "parameters": []
+      }
+    },
+    "/languages/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one languages record",
+        "responses": {
+          "200": {
+            "description": "Retrieve languages document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Languages"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Languages"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single languages record",
+        "responses": {
+          "200": {
+            "description": "Retrieve languages document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Languages"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Languages"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewLanguages"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single languages record",
+        "responses": {
+          "200": {
+            "description": "deletes a single languages based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Languages"
         ],
         "parameters": [
           {
@@ -6700,6 +7211,517 @@
         ]
       }
     },
+    "/translates": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the translates's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve translates document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Translates"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Translates"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new translates record",
+        "responses": {
+          "200": {
+            "description": "Retrieve translates document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Translates"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Translates"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewTranslates"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/translates/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the numver of translates documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve translates document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Translates"
+        ],
+        "parameters": []
+      }
+    },
+    "/translates/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one translates record",
+        "responses": {
+          "200": {
+            "description": "Retrieve translates document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Translates"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Translates"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single translates record",
+        "responses": {
+          "200": {
+            "description": "Retrieve translates document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Translates"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Translates"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewTranslates"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single translates record",
+        "responses": {
+          "200": {
+            "description": "deletes a single translates based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Translates"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/email/": {
       "post": {
         "deprecated": false,
@@ -8860,19 +9882,10 @@
     "schemas": {
       "Blog-categories": {
         "required": [
-          "id",
-          "name"
+          "id"
         ],
         "properties": {
           "id": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string",
-            "maxLength": 255,
-            "minLength": 2
-          },
-          "description": {
             "type": "string"
           },
           "cover": {
@@ -8921,89 +9934,67 @@
               }
             }
           },
-          "blogs": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "sapo",
-                "description",
-                "cover"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "sapo": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "cover": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "comment": {
-                  "type": "string"
-                },
-                "tag": {
-                  "type": "string"
-                },
-                "blog_category": {
-                  "type": "string"
-                }
+          "names": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          },
+          "descriptions": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
               }
             }
           }
         }
       },
       "NewBlog-categories": {
-        "required": [
-          "name"
-        ],
         "properties": {
-          "name": {
-            "type": "string",
-            "maxLength": 255,
-            "minLength": 2
-          },
-          "description": {
+          "names": {
             "type": "string"
           },
-          "blogs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "descriptions": {
+            "type": "string"
           }
         }
       },
       "Blogs": {
         "required": [
           "id",
-          "name",
-          "sapo",
-          "description",
           "cover"
         ],
         "properties": {
           "id": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "sapo": {
-            "type": "string"
-          },
-          "description": {
             "type": "string"
           },
           "cover": {
@@ -9088,7 +10079,7 @@
               }
             }
           },
-          "comment": {
+          "comments": {
             "required": [
               "id",
               "description"
@@ -9102,126 +10093,10 @@
               },
               "user": {
                 "type": "string"
-              },
-              "comment": {
-                "type": "string"
-              },
-              "comments": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "blogs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               }
             }
           },
-          "tag": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "blogs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "products": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "blog_category": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "cover": {
-                "type": "string"
-              },
-              "blogs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      },
-      "NewBlogs": {
-        "required": [
-          "name",
-          "sapo",
-          "description"
-        ],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "sapo": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "user": {
-            "type": "string"
-          },
-          "comment": {
-            "type": "string"
-          },
-          "tag": {
-            "type": "string"
-          },
-          "blog_category": {
-            "type": "string"
-          }
-        }
-      },
-      "Categories": {
-        "required": [
-          "id",
-          "name"
-        ],
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string",
-            "maxLength": 255,
-            "minLength": 2
-          },
-          "description": {
-            "type": "string"
-          },
-          "product": {
+          "tags": {
             "required": [
               "id"
             ],
@@ -9229,58 +10104,106 @@
               "id": {
                 "type": "string"
               },
-              "name": {
+              "names": {
                 "type": "string"
               },
-              "description": {
-                "type": "string"
-              },
-              "images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "categories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user": {
-                "type": "string"
-              },
-              "color": {
-                "type": "string"
-              },
-              "like": {
-                "type": "string"
-              },
-              "rating": {
-                "type": "string"
-              },
-              "review": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "price": {
-                "type": "number"
-              },
-              "discount": {
-                "type": "number"
-              },
-              "amount": {
-                "type": "number"
-              },
-              "sapo": {
-                "type": "string"
-              },
-              "tag": {
+              "descriptions": {
                 "type": "string"
               }
             }
+          },
+          "blog_categories": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "cover": {
+                "type": "string"
+              },
+              "names": {
+                "type": "string"
+              },
+              "descriptions": {
+                "type": "string"
+              }
+            }
+          },
+          "names": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          },
+          "descriptions": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "NewBlogs": {
+        "properties": {
+          "user": {
+            "type": "string"
+          },
+          "comments": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "string"
+          },
+          "blog_categories": {
+            "type": "string"
+          },
+          "names": {
+            "type": "string"
+          },
+          "descriptions": {
+            "type": "string"
+          }
+        }
+      },
+      "Categories": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
           },
           "cover": {
             "required": [
@@ -9328,37 +10251,57 @@
               }
             }
           },
-          "type": {
-            "type": "string",
-            "enum": [
-              "product",
-              "blog"
-            ]
+          "names": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          },
+          "descriptions": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewCategories": {
-        "required": [
-          "name"
-        ],
         "properties": {
-          "name": {
-            "type": "string",
-            "maxLength": 255,
-            "minLength": 2
-          },
-          "description": {
+          "names": {
             "type": "string"
           },
-          "product": {
+          "descriptions": {
             "type": "string"
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "product",
-              "blog"
-            ]
           }
         }
       },
@@ -9370,76 +10313,51 @@
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
-          },
           "hex": {
             "type": "string"
           },
           "rgb": {
             "type": "string"
           },
-          "products": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "images": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "user": {
-                  "type": "string"
-                },
-                "color": {
-                  "type": "string"
-                },
-                "like": {
-                  "type": "string"
-                },
-                "rating": {
-                  "type": "string"
-                },
-                "review": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "number"
-                },
-                "discount": {
-                  "type": "number"
-                },
-                "amount": {
-                  "type": "number"
-                },
-                "sapo": {
-                  "type": "string"
-                },
-                "tag": {
-                  "type": "string"
-                }
+          "names": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          },
+          "descriptions": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
               }
             }
           }
@@ -9447,20 +10365,17 @@
       },
       "NewColors": {
         "properties": {
-          "name": {
-            "type": "string"
-          },
           "hex": {
             "type": "string"
           },
           "rgb": {
             "type": "string"
           },
-          "products": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "names": {
+            "type": "string"
+          },
+          "descriptions": {
+            "type": "string"
           }
         }
       },
@@ -9511,114 +10426,6 @@
                 "type": "string"
               }
             }
-          },
-          "comment": {
-            "required": [
-              "id",
-              "description"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "comment": {
-                "type": "string"
-              },
-              "comments": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "blogs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "comments": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "description"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "comment": {
-                  "type": "string"
-                },
-                "comments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "blogs": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "blogs": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "sapo",
-                "description",
-                "cover"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "sapo": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "cover": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "comment": {
-                  "type": "string"
-                },
-                "tag": {
-                  "type": "string"
-                },
-                "blog_category": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
@@ -9632,21 +10439,6 @@
           },
           "user": {
             "type": "string"
-          },
-          "comment": {
-            "type": "string"
-          },
-          "comments": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "blogs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       },
@@ -9696,6 +10488,46 @@
           }
         }
       },
+      "Languages": {
+        "required": [
+          "id",
+          "code",
+          "iso",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "iso": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "NewLanguages": {
+        "required": [
+          "code",
+          "iso",
+          "name"
+        ],
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "iso": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
       "Likes": {
         "required": [
           "id",
@@ -9708,67 +10540,6 @@
           "liked": {
             "type": "boolean",
             "default": false
-          },
-          "product": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "categories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user": {
-                "type": "string"
-              },
-              "color": {
-                "type": "string"
-              },
-              "like": {
-                "type": "string"
-              },
-              "rating": {
-                "type": "string"
-              },
-              "review": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "price": {
-                "type": "number"
-              },
-              "discount": {
-                "type": "number"
-              },
-              "amount": {
-                "type": "number"
-              },
-              "sapo": {
-                "type": "string"
-              },
-              "tag": {
-                "type": "string"
-              }
-            }
           },
           "user": {
             "required": [
@@ -9805,70 +10576,6 @@
                 "type": "string"
               }
             }
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "images": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "user": {
-                  "type": "string"
-                },
-                "color": {
-                  "type": "string"
-                },
-                "like": {
-                  "type": "string"
-                },
-                "rating": {
-                  "type": "string"
-                },
-                "review": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "number"
-                },
-                "discount": {
-                  "type": "number"
-                },
-                "amount": {
-                  "type": "number"
-                },
-                "sapo": {
-                  "type": "string"
-                },
-                "tag": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
@@ -9881,17 +10588,8 @@
             "type": "boolean",
             "default": false
           },
-          "product": {
-            "type": "string"
-          },
           "user": {
             "type": "string"
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       },
@@ -9903,11 +10601,47 @@
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
+          "names": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
           },
-          "description": {
-            "type": "string"
+          "descriptions": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
           },
           "images": {
             "type": "array",
@@ -9959,31 +10693,21 @@
             }
           },
           "categories": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "product": {
-                  "type": "string"
-                },
-                "cover": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string"
-                }
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "cover": {
+                "type": "string"
+              },
+              "names": {
+                "type": "string"
+              },
+              "descriptions": {
+                "type": "string"
               }
             }
           },
@@ -10023,15 +10747,12 @@
               }
             }
           },
-          "color": {
+          "colors": {
             "required": [
               "id"
             ],
             "properties": {
               "id": {
-                "type": "string"
-              },
-              "name": {
                 "type": "string"
               },
               "hex": {
@@ -10040,15 +10761,15 @@
               "rgb": {
                 "type": "string"
               },
-              "products": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "names": {
+                "type": "string"
+              },
+              "descriptions": {
+                "type": "string"
               }
             }
           },
-          "like": {
+          "likes": {
             "required": [
               "id",
               "liked"
@@ -10060,21 +10781,12 @@
               "liked": {
                 "type": "boolean"
               },
-              "product": {
-                "type": "string"
-              },
               "user": {
                 "type": "string"
-              },
-              "products": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               }
             }
           },
-          "rating": {
+          "ratings": {
             "required": [
               "id",
               "rate"
@@ -10086,21 +10798,12 @@
               "rate": {
                 "type": "number"
               },
-              "product": {
-                "type": "string"
-              },
               "user": {
                 "type": "string"
-              },
-              "products": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               }
             }
           },
-          "review": {
+          "reviews": {
             "required": [
               "id"
             ],
@@ -10113,43 +10816,6 @@
               },
               "user": {
                 "type": "string"
-              },
-              "product": {
-                "type": "string"
-              },
-              "review": {
-                "type": "string"
-              },
-              "products": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "size": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "symbol": {
-                "type": "string"
-              },
-              "products": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               }
             }
           },
@@ -10162,32 +10828,38 @@
           "amount": {
             "type": "number"
           },
-          "sapo": {
-            "type": "string"
-          },
-          "tag": {
+          "tags": {
             "required": [
-              "id",
-              "name"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "names": {
                 "type": "string"
               },
-              "blogs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "descriptions": {
+                "type": "string"
+              }
+            }
+          },
+          "sizes": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
               },
-              "products": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "symbol": {
+                "type": "string"
+              },
+              "names": {
+                "type": "string"
+              },
+              "descriptions": {
+                "type": "string"
               }
             }
           }
@@ -10195,34 +10867,28 @@
       },
       "NewProducts": {
         "properties": {
-          "name": {
+          "names": {
             "type": "string"
           },
-          "description": {
+          "descriptions": {
             "type": "string"
           },
           "categories": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+            "type": "string"
           },
           "user": {
             "type": "string"
           },
-          "color": {
+          "colors": {
             "type": "string"
           },
-          "like": {
+          "likes": {
             "type": "string"
           },
-          "rating": {
+          "ratings": {
             "type": "string"
           },
-          "review": {
-            "type": "string"
-          },
-          "size": {
+          "reviews": {
             "type": "string"
           },
           "price": {
@@ -10234,10 +10900,10 @@
           "amount": {
             "type": "number"
           },
-          "sapo": {
+          "tags": {
             "type": "string"
           },
-          "tag": {
+          "sizes": {
             "type": "string"
           }
         }
@@ -10255,67 +10921,6 @@
             "type": "number",
             "default": 0
           },
-          "product": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "categories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user": {
-                "type": "string"
-              },
-              "color": {
-                "type": "string"
-              },
-              "like": {
-                "type": "string"
-              },
-              "rating": {
-                "type": "string"
-              },
-              "review": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "price": {
-                "type": "number"
-              },
-              "discount": {
-                "type": "number"
-              },
-              "amount": {
-                "type": "number"
-              },
-              "sapo": {
-                "type": "string"
-              },
-              "tag": {
-                "type": "string"
-              }
-            }
-          },
           "user": {
             "required": [
               "id",
@@ -10351,70 +10956,6 @@
                 "type": "string"
               }
             }
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "images": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "user": {
-                  "type": "string"
-                },
-                "color": {
-                  "type": "string"
-                },
-                "like": {
-                  "type": "string"
-                },
-                "rating": {
-                  "type": "string"
-                },
-                "review": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "number"
-                },
-                "discount": {
-                  "type": "number"
-                },
-                "amount": {
-                  "type": "number"
-                },
-                "sapo": {
-                  "type": "string"
-                },
-                "tag": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
@@ -10427,17 +10968,8 @@
             "type": "number",
             "default": 0
           },
-          "product": {
-            "type": "string"
-          },
           "user": {
             "type": "string"
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       },
@@ -10487,159 +11019,6 @@
                 "type": "string"
               }
             }
-          },
-          "product": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "categories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user": {
-                "type": "string"
-              },
-              "color": {
-                "type": "string"
-              },
-              "like": {
-                "type": "string"
-              },
-              "rating": {
-                "type": "string"
-              },
-              "review": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "price": {
-                "type": "number"
-              },
-              "discount": {
-                "type": "number"
-              },
-              "amount": {
-                "type": "number"
-              },
-              "sapo": {
-                "type": "string"
-              },
-              "tag": {
-                "type": "string"
-              }
-            }
-          },
-          "review": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "product": {
-                "type": "string"
-              },
-              "review": {
-                "type": "string"
-              },
-              "products": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "images": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "user": {
-                  "type": "string"
-                },
-                "color": {
-                  "type": "string"
-                },
-                "like": {
-                  "type": "string"
-                },
-                "rating": {
-                  "type": "string"
-                },
-                "review": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "number"
-                },
-                "discount": {
-                  "type": "number"
-                },
-                "amount": {
-                  "type": "number"
-                },
-                "sapo": {
-                  "type": "string"
-                },
-                "tag": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
@@ -10650,18 +11029,6 @@
           },
           "user": {
             "type": "string"
-          },
-          "product": {
-            "type": "string"
-          },
-          "review": {
-            "type": "string"
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       },
@@ -10676,12 +11043,6 @@
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
           "key": {
             "type": "string"
           },
@@ -10690,6 +11051,48 @@
           },
           "group": {
             "type": "string"
+          },
+          "names": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          },
+          "descriptions": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -10700,12 +11103,6 @@
           "group"
         ],
         "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
           "key": {
             "type": "string"
           },
@@ -10713,6 +11110,12 @@
             "type": "string"
           },
           "group": {
+            "type": "string"
+          },
+          "names": {
+            "type": "string"
+          },
+          "descriptions": {
             "type": "string"
           }
         }
@@ -10725,76 +11128,48 @@
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
           "symbol": {
             "type": "string"
           },
-          "products": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "images": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "user": {
-                  "type": "string"
-                },
-                "color": {
-                  "type": "string"
-                },
-                "like": {
-                  "type": "string"
-                },
-                "rating": {
-                  "type": "string"
-                },
-                "review": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "number"
-                },
-                "discount": {
-                  "type": "number"
-                },
-                "amount": {
-                  "type": "number"
-                },
-                "sapo": {
-                  "type": "string"
-                },
-                "tag": {
-                  "type": "string"
-                }
+          "names": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          },
+          "descriptions": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
               }
             }
           }
@@ -10802,161 +11177,139 @@
       },
       "NewSizes": {
         "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
           "symbol": {
             "type": "string"
           },
-          "products": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "names": {
+            "type": "string"
+          },
+          "descriptions": {
+            "type": "string"
           }
         }
       },
       "Tags": {
         "required": [
-          "id",
-          "name"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
-          },
-          "blogs": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "sapo",
-                "description",
-                "cover"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "sapo": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "cover": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "comment": {
-                  "type": "string"
-                },
-                "tag": {
-                  "type": "string"
-                },
-                "blog_category": {
-                  "type": "string"
-                }
+          "names": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
               }
             }
           },
-          "products": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "images": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "user": {
-                  "type": "string"
-                },
-                "color": {
-                  "type": "string"
-                },
-                "like": {
-                  "type": "string"
-                },
-                "rating": {
-                  "type": "string"
-                },
-                "review": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "number"
-                },
-                "discount": {
-                  "type": "number"
-                },
-                "amount": {
-                  "type": "number"
-                },
-                "sapo": {
-                  "type": "string"
-                },
-                "tag": {
-                  "type": "string"
-                }
+          "descriptions": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
               }
             }
           }
         }
       },
       "NewTags": {
-        "required": [
-          "name"
-        ],
         "properties": {
-          "name": {
+          "names": {
             "type": "string"
           },
-          "blogs": {
-            "type": "array",
-            "items": {
-              "type": "string"
+          "descriptions": {
+            "type": "string"
+          }
+        }
+      },
+      "Translates": {
+        "required": [
+          "id",
+          "key",
+          "value"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1
+          },
+          "language": {
+            "required": [
+              "id",
+              "code",
+              "iso",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "iso": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
             }
           },
-          "products": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "value": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "NewTranslates": {
+        "required": [
+          "key",
+          "value"
+        ],
+        "properties": {
+          "key": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1
+          },
+          "language": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string",
+            "minLength": 1
           }
         }
       },
@@ -11225,6 +11578,9 @@
       "name": "Contacts"
     },
     {
+      "name": "Languages"
+    },
+    {
       "name": "Likes"
     },
     {
@@ -11244,6 +11600,9 @@
     },
     {
       "name": "Tags"
+    },
+    {
+      "name": "Translates"
     },
     {
       "name": "Email - Email"

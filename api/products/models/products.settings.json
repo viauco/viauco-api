@@ -9,11 +9,11 @@
     "timestamps": true
   },
   "attributes": {
-    "name": {
-      "type": "string"
+    "names": {
+      "collection": "translates"
     },
-    "description": {
-      "type": "richtext"
+    "descriptions": {
+      "collection": "translates"
     },
     "images": {
       "collection": "file",
@@ -22,32 +22,23 @@
       "required": false
     },
     "categories": {
-      "collection": "categories",
-      "via": "product"
+      "collection": "categories"
     },
     "user": {
       "plugin": "users-permissions",
       "model": "user"
     },
-    "color": {
-      "model": "colors",
-      "via": "products"
+    "colors": {
+      "collection": "colors"
     },
-    "like": {
-      "model": "likes",
-      "via": "products"
+    "likes": {
+      "collection": "likes"
     },
-    "rating": {
-      "model": "rating",
-      "via": "products"
+    "ratings": {
+      "collection": "rating"
     },
-    "review": {
-      "model": "reviews",
-      "via": "products"
-    },
-    "size": {
-      "model": "sizes",
-      "via": "products"
+    "reviews": {
+      "collection": "reviews"
     },
     "price": {
       "type": "decimal"
@@ -58,12 +49,11 @@
     "amount": {
       "type": "decimal"
     },
-    "sapo": {
-      "type": "string"
+    "tags": {
+      "collection": "tags"
     },
-    "tag": {
-      "model": "tags",
-      "via": "products"
+    "sizes": {
+      "collection": "sizes"
     }
   }
 }

@@ -517,22 +517,10 @@
       "Blogs": {
         "required": [
           "id",
-          "name",
-          "sapo",
-          "description",
           "cover"
         ],
         "properties": {
           "id": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "sapo": {
-            "type": "string"
-          },
-          "description": {
             "type": "string"
           },
           "cover": {
@@ -617,7 +605,7 @@
               }
             }
           },
-          "comment": {
+          "comments": {
             "required": [
               "id",
               "description"
@@ -631,104 +619,106 @@
               },
               "user": {
                 "type": "string"
-              },
-              "comment": {
-                "type": "string"
-              },
-              "comments": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "blogs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               }
             }
           },
-          "tag": {
+          "tags": {
             "required": [
-              "id",
-              "name"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "names": {
                 "type": "string"
               },
-              "blogs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "products": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "descriptions": {
+                "type": "string"
               }
             }
           },
-          "blog_category": {
+          "blog_categories": {
             "required": [
-              "id",
-              "name"
+              "id"
             ],
             "properties": {
               "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
                 "type": "string"
               },
               "cover": {
                 "type": "string"
               },
-              "blogs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "names": {
+                "type": "string"
+              },
+              "descriptions": {
+                "type": "string"
+              }
+            }
+          },
+          "names": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          },
+          "descriptions": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
               }
             }
           }
         }
       },
       "NewBlogs": {
-        "required": [
-          "name",
-          "sapo",
-          "description"
-        ],
         "properties": {
-          "name": {
-            "type": "string"
-          },
-          "sapo": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
           "user": {
             "type": "string"
           },
-          "comment": {
+          "comments": {
             "type": "string"
           },
-          "tag": {
+          "tags": {
             "type": "string"
           },
-          "blog_category": {
+          "blog_categories": {
+            "type": "string"
+          },
+          "names": {
+            "type": "string"
+          },
+          "descriptions": {
             "type": "string"
           }
         }

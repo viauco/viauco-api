@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/products": {
+    "/languages": {
       "get": {
         "deprecated": false,
-        "description": "Find all the products's records",
+        "description": "Find all the languages's records",
         "responses": {
           "200": {
-            "description": "Retrieve products document(s)",
+            "description": "Retrieve languages document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Products"
+                    "$ref": "#/components/schemas/Languages"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Languages"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new products record",
+        "description": "Create a new languages record",
         "responses": {
           "200": {
-            "description": "Retrieve products document(s)",
+            "description": "Retrieve languages document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Products"
+                  "$ref": "#/components/schemas/Languages"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Languages"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProducts"
+                "$ref": "#/components/schemas/NewLanguages"
               }
             }
           }
         }
       }
     },
-    "/products/count": {
+    "/languages/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of products documents",
+        "description": "Retrieve the numver of languages documents",
         "responses": {
           "200": {
-            "description": "Retrieve products document(s)",
+            "description": "Retrieve languages document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Languages"
         ],
         "parameters": []
       }
     },
-    "/products/{id}": {
+    "/languages/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one products record",
+        "description": "Find one languages record",
         "responses": {
           "200": {
-            "description": "Retrieve products document(s)",
+            "description": "Retrieve languages document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Products"
+                  "$ref": "#/components/schemas/Languages"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Languages"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single products record",
+        "description": "Update a single languages record",
         "responses": {
           "200": {
-            "description": "Retrieve products document(s)",
+            "description": "Retrieve languages document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Products"
+                  "$ref": "#/components/schemas/Languages"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Languages"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProducts"
+                "$ref": "#/components/schemas/NewLanguages"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single products record",
+        "description": "Delete a single languages record",
         "responses": {
           "200": {
-            "description": "deletes a single products based on the ID supplied",
+            "description": "deletes a single languages based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Products"
+          "Languages"
         ],
         "parameters": [
           {
@@ -514,317 +514,42 @@
   },
   "components": {
     "schemas": {
-      "Products": {
+      "Languages": {
         "required": [
-          "id"
+          "id",
+          "code",
+          "iso",
+          "name"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "names": {
-            "required": [
-              "id",
-              "key",
-              "value"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "key": {
-                "type": "string"
-              },
-              "language": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
-              }
-            }
+          "code": {
+            "type": "string"
           },
-          "descriptions": {
-            "required": [
-              "id",
-              "key",
-              "value"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "key": {
-                "type": "string"
-              },
-              "language": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
-              }
-            }
+          "iso": {
+            "type": "string"
           },
-          "images": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "sha256": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "categories": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "cover": {
-                "type": "string"
-              },
-              "names": {
-                "type": "string"
-              },
-              "descriptions": {
-                "type": "string"
-              }
-            }
-          },
-          "user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              }
-            }
-          },
-          "colors": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "hex": {
-                "type": "string"
-              },
-              "rgb": {
-                "type": "string"
-              },
-              "names": {
-                "type": "string"
-              },
-              "descriptions": {
-                "type": "string"
-              }
-            }
-          },
-          "likes": {
-            "required": [
-              "id",
-              "liked"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "liked": {
-                "type": "boolean"
-              },
-              "user": {
-                "type": "string"
-              }
-            }
-          },
-          "ratings": {
-            "required": [
-              "id",
-              "rate"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "rate": {
-                "type": "number"
-              },
-              "user": {
-                "type": "string"
-              }
-            }
-          },
-          "reviews": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              }
-            }
-          },
-          "price": {
-            "type": "number"
-          },
-          "discount": {
-            "type": "number"
-          },
-          "amount": {
-            "type": "number"
-          },
-          "tags": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "names": {
-                "type": "string"
-              },
-              "descriptions": {
-                "type": "string"
-              }
-            }
-          },
-          "sizes": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "symbol": {
-                "type": "string"
-              },
-              "names": {
-                "type": "string"
-              },
-              "descriptions": {
-                "type": "string"
-              }
-            }
+          "name": {
+            "type": "string"
           }
         }
       },
-      "NewProducts": {
+      "NewLanguages": {
+        "required": [
+          "code",
+          "iso",
+          "name"
+        ],
         "properties": {
-          "names": {
+          "code": {
             "type": "string"
           },
-          "descriptions": {
+          "iso": {
             "type": "string"
           },
-          "categories": {
-            "type": "string"
-          },
-          "user": {
-            "type": "string"
-          },
-          "colors": {
-            "type": "string"
-          },
-          "likes": {
-            "type": "string"
-          },
-          "ratings": {
-            "type": "string"
-          },
-          "reviews": {
-            "type": "string"
-          },
-          "price": {
-            "type": "number"
-          },
-          "discount": {
-            "type": "number"
-          },
-          "amount": {
-            "type": "number"
-          },
-          "tags": {
-            "type": "string"
-          },
-          "sizes": {
+          "name": {
             "type": "string"
           }
         }
@@ -833,7 +558,7 @@
   },
   "tags": [
     {
-      "name": "Products"
+      "name": "Languages"
     }
   ]
 }

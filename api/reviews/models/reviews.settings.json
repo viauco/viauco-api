@@ -15,16 +15,6 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user"
-    },
-    "product": {
-      "model": "products"
-    },
-    "review": {
-      "model": "reviews"
-    },
-    "products": {
-      "via": "review",
-      "collection": "products"
     }
   }
 }

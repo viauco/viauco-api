@@ -525,12 +525,6 @@
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
           "key": {
             "type": "string"
           },
@@ -539,6 +533,48 @@
           },
           "group": {
             "type": "string"
+          },
+          "names": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          },
+          "descriptions": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -549,12 +585,6 @@
           "group"
         ],
         "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
           "key": {
             "type": "string"
           },
@@ -562,6 +592,12 @@
             "type": "string"
           },
           "group": {
+            "type": "string"
+          },
+          "names": {
+            "type": "string"
+          },
+          "descriptions": {
             "type": "string"
           }
         }

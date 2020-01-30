@@ -1,34 +1,27 @@
 {
   "connection": "default",
-  "collectionName": "settings",
+  "collectionName": "languages",
   "info": {
-    "name": "Settings"
+    "name": "Languages"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "key": {
+    "code": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "value": {
-      "type": "text",
-      "required": true,
-      "unique": true
-    },
-    "group": {
+    "iso": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "names": {
-      "collection": "translates"
-    },
-    "descriptions": {
-      "collection": "translates"
+    "name": {
+      "type": "string",
+      "required": true
     }
   }
 }

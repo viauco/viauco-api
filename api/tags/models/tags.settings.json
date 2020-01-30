@@ -9,18 +9,11 @@
     "timestamps": true
   },
   "attributes": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "unique": true
+    "names": {
+      "collection": "translates"
     },
-    "blogs": {
-      "via": "tag",
-      "collection": "blogs"
-    },
-    "products": {
-      "via": "tag",
-      "collection": "products"
+    "descriptions": {
+      "collection": "translates"
     }
   }
 }

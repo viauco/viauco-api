@@ -527,67 +527,6 @@
             "type": "boolean",
             "default": false
           },
-          "product": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "categories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user": {
-                "type": "string"
-              },
-              "color": {
-                "type": "string"
-              },
-              "like": {
-                "type": "string"
-              },
-              "rating": {
-                "type": "string"
-              },
-              "review": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "price": {
-                "type": "number"
-              },
-              "discount": {
-                "type": "number"
-              },
-              "amount": {
-                "type": "number"
-              },
-              "sapo": {
-                "type": "string"
-              },
-              "tag": {
-                "type": "string"
-              }
-            }
-          },
           "user": {
             "required": [
               "id",
@@ -623,70 +562,6 @@
                 "type": "string"
               }
             }
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "images": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "user": {
-                  "type": "string"
-                },
-                "color": {
-                  "type": "string"
-                },
-                "like": {
-                  "type": "string"
-                },
-                "rating": {
-                  "type": "string"
-                },
-                "review": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "number"
-                },
-                "discount": {
-                  "type": "number"
-                },
-                "amount": {
-                  "type": "number"
-                },
-                "sapo": {
-                  "type": "string"
-                },
-                "tag": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
@@ -699,17 +574,8 @@
             "type": "boolean",
             "default": false
           },
-          "product": {
-            "type": "string"
-          },
           "user": {
             "type": "string"
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       }

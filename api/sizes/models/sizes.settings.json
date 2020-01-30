@@ -9,18 +9,14 @@
     "timestamps": true
   },
   "attributes": {
-    "name": {
-      "type": "string"
-    },
-    "description": {
-      "type": "richtext"
-    },
     "symbol": {
       "type": "string"
     },
-    "products": {
-      "via": "size",
-      "collection": "products"
+    "names": {
+      "collection": "translates"
+    },
+    "descriptions": {
+      "collection": "translates"
     }
   }
 }

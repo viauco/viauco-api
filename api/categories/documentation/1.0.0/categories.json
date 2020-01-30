@@ -516,81 +516,11 @@
     "schemas": {
       "Categories": {
         "required": [
-          "id",
-          "name"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
-          },
-          "name": {
-            "type": "string",
-            "maxLength": 255,
-            "minLength": 2
-          },
-          "description": {
-            "type": "string"
-          },
-          "product": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "categories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user": {
-                "type": "string"
-              },
-              "color": {
-                "type": "string"
-              },
-              "like": {
-                "type": "string"
-              },
-              "rating": {
-                "type": "string"
-              },
-              "review": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "price": {
-                "type": "number"
-              },
-              "discount": {
-                "type": "number"
-              },
-              "amount": {
-                "type": "number"
-              },
-              "sapo": {
-                "type": "string"
-              },
-              "tag": {
-                "type": "string"
-              }
-            }
           },
           "cover": {
             "required": [
@@ -638,37 +568,57 @@
               }
             }
           },
-          "type": {
-            "type": "string",
-            "enum": [
-              "product",
-              "blog"
-            ]
+          "names": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          },
+          "descriptions": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewCategories": {
-        "required": [
-          "name"
-        ],
         "properties": {
-          "name": {
-            "type": "string",
-            "maxLength": 255,
-            "minLength": 2
-          },
-          "description": {
+          "names": {
             "type": "string"
           },
-          "product": {
+          "descriptions": {
             "type": "string"
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "product",
-              "blog"
-            ]
           }
         }
       }

@@ -14,16 +14,9 @@
       "default": 0,
       "required": true
     },
-    "product": {
-      "model": "products"
-    },
     "user": {
       "plugin": "users-permissions",
       "model": "user"
-    },
-    "products": {
-      "via": "rating",
-      "collection": "products"
     }
   }
 }

@@ -516,142 +516,63 @@
     "schemas": {
       "Tags": {
         "required": [
-          "id",
-          "name"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
-          },
-          "blogs": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "sapo",
-                "description",
-                "cover"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "sapo": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "cover": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "comment": {
-                  "type": "string"
-                },
-                "tag": {
-                  "type": "string"
-                },
-                "blog_category": {
-                  "type": "string"
-                }
+          "names": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
               }
             }
           },
-          "products": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "images": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "user": {
-                  "type": "string"
-                },
-                "color": {
-                  "type": "string"
-                },
-                "like": {
-                  "type": "string"
-                },
-                "rating": {
-                  "type": "string"
-                },
-                "review": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "number"
-                },
-                "discount": {
-                  "type": "number"
-                },
-                "amount": {
-                  "type": "number"
-                },
-                "sapo": {
-                  "type": "string"
-                },
-                "tag": {
-                  "type": "string"
-                }
+          "descriptions": {
+            "required": [
+              "id",
+              "key",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "key": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
               }
             }
           }
         }
       },
       "NewTags": {
-        "required": [
-          "name"
-        ],
         "properties": {
-          "name": {
+          "names": {
             "type": "string"
           },
-          "blogs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "descriptions": {
+            "type": "string"
           }
         }
       }

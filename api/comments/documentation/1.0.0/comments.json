@@ -561,114 +561,6 @@
                 "type": "string"
               }
             }
-          },
-          "comment": {
-            "required": [
-              "id",
-              "description"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "comment": {
-                "type": "string"
-              },
-              "comments": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "blogs": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "comments": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "description"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "comment": {
-                  "type": "string"
-                },
-                "comments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "blogs": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "blogs": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "sapo",
-                "description",
-                "cover"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "sapo": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "cover": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "comment": {
-                  "type": "string"
-                },
-                "tag": {
-                  "type": "string"
-                },
-                "blog_category": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
@@ -682,21 +574,6 @@
           },
           "user": {
             "type": "string"
-          },
-          "comment": {
-            "type": "string"
-          },
-          "comments": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "blogs": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       }

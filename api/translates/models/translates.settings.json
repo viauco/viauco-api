@@ -1,0 +1,28 @@
+{
+  "connection": "default",
+  "collectionName": "translates",
+  "info": {
+    "name": "Translates"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "key": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 255,
+      "minLength": 1
+    },
+    "language": {
+      "model": "languages"
+    },
+    "value": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 1
+    }
+  }
+}

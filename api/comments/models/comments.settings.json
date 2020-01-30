@@ -16,18 +16,6 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user"
-    },
-    "comment": {
-      "via": "comments",
-      "model": "comments"
-    },
-    "comments": {
-      "via": "comment",
-      "collection": "comments"
-    },
-    "blogs": {
-      "via": "comment",
-      "collection": "blogs"
     }
   }
 }
