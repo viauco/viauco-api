@@ -1,0 +1,19 @@
+{
+  "info": {
+    "name": "OrderDetails"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "order": {
+      "model": "orders"
+    },
+    "product": {
+      "model": "products"
+    }
+  },
+  "connection": "default",
+  "collectionName": "order_details"
+}

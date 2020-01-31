@@ -1,0 +1,18 @@
+{
+  "connection": "default",
+  "collectionName": "orders",
+  "info": {
+    "name": "Orders"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "status": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    }
+  }
+}
