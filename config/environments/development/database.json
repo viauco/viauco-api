@@ -5,14 +5,16 @@
       "connector": "bookshelf",
       "settings": {
         "client": "postgres",
-        "database": "viauco",
-        "host": "127.0.0.1",
+        "host": "localhost",
         "port": 5432,
         "username": "postgres",
-        "password": "123456"
+        "password": "12345678",
+        "database": "viauco",
+        "schema": "public",
+        "ssl": false
       },
       "options": {
-        "debug": false
+        "debug": true
       }
     }
   }
