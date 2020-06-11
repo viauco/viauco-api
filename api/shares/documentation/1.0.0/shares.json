@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/comments": {
+    "/shares": {
       "get": {
         "deprecated": false,
-        "description": "Find all the comments's records",
+        "description": "Find all the shares's records",
         "responses": {
           "200": {
-            "description": "Retrieve comments document(s)",
+            "description": "Retrieve shares document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Comments"
+                    "$ref": "#/components/schemas/Shares"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Comments"
+          "Shares"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new comments record",
+        "description": "Create a new shares record",
         "responses": {
           "200": {
-            "description": "Retrieve comments document(s)",
+            "description": "Retrieve shares document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Comments"
+                  "$ref": "#/components/schemas/Shares"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Comments"
+          "Shares"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewComments"
+                "$ref": "#/components/schemas/NewShares"
               }
             }
           }
         }
       }
     },
-    "/comments/count": {
+    "/shares/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of comments documents",
+        "description": "Retrieve the numver of shares documents",
         "responses": {
           "200": {
-            "description": "Retrieve comments document(s)",
+            "description": "Retrieve shares document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Comments"
+          "Shares"
         ],
         "parameters": []
       }
     },
-    "/comments/{id}": {
+    "/shares/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one comments record",
+        "description": "Find one shares record",
         "responses": {
           "200": {
-            "description": "Retrieve comments document(s)",
+            "description": "Retrieve shares document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Comments"
+                  "$ref": "#/components/schemas/Shares"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Comments"
+          "Shares"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single comments record",
+        "description": "Update a single shares record",
         "responses": {
           "200": {
-            "description": "Retrieve comments document(s)",
+            "description": "Retrieve shares document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Comments"
+                  "$ref": "#/components/schemas/Shares"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Comments"
+          "Shares"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewComments"
+                "$ref": "#/components/schemas/NewShares"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single comments record",
+        "description": "Delete a single shares record",
         "responses": {
           "200": {
-            "description": "deletes a single comments based on the ID supplied",
+            "description": "deletes a single shares based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Comments"
+          "Shares"
         ],
         "parameters": [
           {
@@ -514,16 +514,12 @@
   },
   "components": {
     "schemas": {
-      "Comments": {
+      "Shares": {
         "required": [
-          "id",
-          "description"
+          "id"
         ],
         "properties": {
           "id": {
-            "type": "string"
-          },
-          "description": {
             "type": "string"
           },
           "user": {
@@ -562,46 +558,74 @@
               }
             }
           },
-          "likes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "post": {
-                  "type": "string"
-                },
-                "comment": {
+          "post": {
+            "required": [
+              "id",
+              "cover"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "cover": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "comments": {
+                "type": "string"
+              },
+              "tags": {
+                "type": "string"
+              },
+              "categories": {
+                "type": "string"
+              },
+              "attachments": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "likes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "shares": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "views": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "description": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "summary": {
+                "type": "string"
               }
             }
           }
         }
       },
-      "NewComments": {
-        "required": [
-          "description"
-        ],
+      "NewShares": {
         "properties": {
-          "description": {
-            "type": "string"
-          },
           "user": {
             "type": "string"
           },
-          "likes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "post": {
+            "type": "string"
           }
         }
       }
@@ -609,7 +633,7 @@
   },
   "tags": [
     {
-      "name": "Comments"
+      "name": "Shares"
     }
   ]
 }

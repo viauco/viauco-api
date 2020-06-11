@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/comments": {
+    "/views": {
       "get": {
         "deprecated": false,
-        "description": "Find all the comments's records",
+        "description": "Find all the views's records",
         "responses": {
           "200": {
-            "description": "Retrieve comments document(s)",
+            "description": "Retrieve views document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Comments"
+                    "$ref": "#/components/schemas/Views"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Comments"
+          "Views"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new comments record",
+        "description": "Create a new views record",
         "responses": {
           "200": {
-            "description": "Retrieve comments document(s)",
+            "description": "Retrieve views document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Comments"
+                  "$ref": "#/components/schemas/Views"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Comments"
+          "Views"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewComments"
+                "$ref": "#/components/schemas/NewViews"
               }
             }
           }
         }
       }
     },
-    "/comments/count": {
+    "/views/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of comments documents",
+        "description": "Retrieve the numver of views documents",
         "responses": {
           "200": {
-            "description": "Retrieve comments document(s)",
+            "description": "Retrieve views document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Comments"
+          "Views"
         ],
         "parameters": []
       }
     },
-    "/comments/{id}": {
+    "/views/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one comments record",
+        "description": "Find one views record",
         "responses": {
           "200": {
-            "description": "Retrieve comments document(s)",
+            "description": "Retrieve views document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Comments"
+                  "$ref": "#/components/schemas/Views"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Comments"
+          "Views"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single comments record",
+        "description": "Update a single views record",
         "responses": {
           "200": {
-            "description": "Retrieve comments document(s)",
+            "description": "Retrieve views document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Comments"
+                  "$ref": "#/components/schemas/Views"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Comments"
+          "Views"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewComments"
+                "$ref": "#/components/schemas/NewViews"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single comments record",
+        "description": "Delete a single views record",
         "responses": {
           "200": {
-            "description": "deletes a single comments based on the ID supplied",
+            "description": "deletes a single views based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Comments"
+          "Views"
         ],
         "parameters": [
           {
@@ -514,16 +514,12 @@
   },
   "components": {
     "schemas": {
-      "Comments": {
+      "Views": {
         "required": [
-          "id",
-          "description"
+          "id"
         ],
         "properties": {
           "id": {
-            "type": "string"
-          },
-          "description": {
             "type": "string"
           },
           "user": {
@@ -562,46 +558,74 @@
               }
             }
           },
-          "likes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "post": {
-                  "type": "string"
-                },
-                "comment": {
+          "post": {
+            "required": [
+              "id",
+              "cover"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "cover": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "comments": {
+                "type": "string"
+              },
+              "tags": {
+                "type": "string"
+              },
+              "categories": {
+                "type": "string"
+              },
+              "attachments": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "likes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "shares": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "views": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "description": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "summary": {
+                "type": "string"
               }
             }
           }
         }
       },
-      "NewComments": {
-        "required": [
-          "description"
-        ],
+      "NewViews": {
         "properties": {
-          "description": {
-            "type": "string"
-          },
           "user": {
             "type": "string"
           },
-          "likes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "post": {
+            "type": "string"
           }
         }
       }
@@ -609,7 +633,7 @@
   },
   "tags": [
     {
-      "name": "Comments"
+      "name": "Views"
     }
   ]
 }

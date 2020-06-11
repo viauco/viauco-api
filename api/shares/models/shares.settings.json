@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "likes",
+  "collectionName": "shares",
   "info": {
-    "name": "likes"
+    "name": "shares"
   },
   "options": {
     "increments": true,
@@ -15,12 +15,8 @@
       "model": "user"
     },
     "post": {
-      "via": "likes",
+      "via": "shares",
       "model": "posts"
-    },
-    "comment": {
-      "via": "likes",
-      "model": "comments"
     }
   }
 }

@@ -516,16 +516,11 @@
     "schemas": {
       "Likes": {
         "required": [
-          "id",
-          "liked"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
-          },
-          "liked": {
-            "type": "boolean",
-            "default": false
           },
           "user": {
             "required": [
@@ -562,19 +557,100 @@
                 "type": "string"
               }
             }
+          },
+          "post": {
+            "required": [
+              "id",
+              "cover"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "cover": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "comments": {
+                "type": "string"
+              },
+              "tags": {
+                "type": "string"
+              },
+              "categories": {
+                "type": "string"
+              },
+              "attachments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "likes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "shares": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "views": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "description": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "summary": {
+                "type": "string"
+              }
+            }
+          },
+          "comment": {
+            "required": [
+              "id",
+              "description"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "likes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
       "NewLikes": {
-        "required": [
-          "liked"
-        ],
         "properties": {
-          "liked": {
-            "type": "boolean",
-            "default": false
-          },
           "user": {
+            "type": "string"
+          },
+          "post": {
+            "type": "string"
+          },
+          "comment": {
             "type": "string"
           }
         }

@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `blog-categories` model.
+ * Lifecycle callbacks for the `likes` model.
  */
 
 module.exports = {

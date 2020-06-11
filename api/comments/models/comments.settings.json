@@ -1,4 +1,5 @@
 {
+  "kind": "collectionType",
   "connection": "default",
   "collectionName": "comments",
   "info": {
@@ -16,6 +17,10 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "likes": {
+      "collection": "likes",
+      "via": "comment"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "likes",
+  "collectionName": "views",
   "info": {
-    "name": "likes"
+    "name": "views"
   },
   "options": {
     "increments": true,
@@ -15,12 +15,8 @@
       "model": "user"
     },
     "post": {
-      "via": "likes",
+      "via": "views",
       "model": "posts"
-    },
-    "comment": {
-      "via": "likes",
-      "model": "comments"
     }
   }
 }
