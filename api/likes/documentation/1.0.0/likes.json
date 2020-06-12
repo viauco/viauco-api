@@ -606,7 +606,7 @@
                   "type": "string"
                 }
               },
-              "description": {
+              "content": {
                 "type": "string"
               },
               "title": {
@@ -620,13 +620,13 @@
           "comment": {
             "required": [
               "id",
-              "description"
+              "content"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "description": {
+              "content": {
                 "type": "string"
               },
               "user": {

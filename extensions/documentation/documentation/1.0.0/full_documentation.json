@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "06/11/2020 4:43:32 PM"
+    "x-generation-date": "06/12/2020 8:20:09 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4644,517 +4644,6 @@
         ]
       }
     },
-    "/translates": {
-      "get": {
-        "deprecated": false,
-        "description": "Find all the translates's records",
-        "responses": {
-          "200": {
-            "description": "Retrieve translates document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Translates"
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Translates"
-        ],
-        "parameters": [
-          {
-            "name": "_limit",
-            "in": "query",
-            "required": false,
-            "description": "Maximum number of results possible",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_sort",
-            "in": "query",
-            "required": false,
-            "description": "Sort according to a specific field.",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_start",
-            "in": "query",
-            "required": false,
-            "description": "Skip a specific number of entries (especially useful for pagination)",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "=",
-            "in": "query",
-            "required": false,
-            "description": "Get entries that matches exactly your input",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_ne",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are not equals to something",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lt",
-            "in": "query",
-            "required": false,
-            "description": "Get record that are lower than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are lower than or equal to a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gt",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than  or equal a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_contains",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_containss",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains (case sensitive) a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_in",
-            "in": "query",
-            "required": false,
-            "description": "Get records that matches any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_nin",
-            "in": "query",
-            "required": false,
-            "description": "Get records that doesn't match any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          }
-        ]
-      },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new translates record",
-        "responses": {
-          "200": {
-            "description": "Retrieve translates document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Translates"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Translates"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewTranslates"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/translates/count": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve the numver of translates documents",
-        "responses": {
-          "200": {
-            "description": "Retrieve translates document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "count": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Translates"
-        ],
-        "parameters": []
-      }
-    },
-    "/translates/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "Find one translates record",
-        "responses": {
-          "200": {
-            "description": "Retrieve translates document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Translates"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Translates"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "put": {
-        "deprecated": false,
-        "description": "Update a single translates record",
-        "responses": {
-          "200": {
-            "description": "Retrieve translates document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Translates"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Translates"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewTranslates"
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a single translates record",
-        "responses": {
-          "200": {
-            "description": "deletes a single translates based on the ID supplied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Translates"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
     "/views": {
       "get": {
         "deprecated": false,
@@ -7832,91 +7321,61 @@
           "id": {
             "type": "string"
           },
-          "cover": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "sha256": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
+          "title": {
+            "type": "string"
           },
-          "names": {
-            "required": [
-              "id",
-              "key",
-              "value"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "key": {
-                "type": "string"
-              },
-              "language": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
-              }
-            }
+          "summary": {
+            "type": "string"
           },
-          "descriptions": {
-            "required": [
-              "id",
-              "key",
-              "value"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "key": {
-                "type": "string"
-              },
-              "language": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
+          "content": {
+            "type": "string"
+          },
+          "attachments": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -7924,10 +7383,13 @@
       },
       "NewCategories": {
         "properties": {
-          "names": {
+          "title": {
             "type": "string"
           },
-          "descriptions": {
+          "summary": {
+            "type": "string"
+          },
+          "content": {
             "type": "string"
           }
         }
@@ -7935,13 +7397,13 @@
       "Comments": {
         "required": [
           "id",
-          "description"
+          "content"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "description": {
+          "content": {
             "type": "string"
           },
           "user": {
@@ -8006,10 +7468,10 @@
       },
       "NewComments": {
         "required": [
-          "description"
+          "content"
         ],
         "properties": {
-          "description": {
+          "content": {
             "type": "string"
           },
           "user": {
@@ -8043,7 +7505,7 @@
           "email": {
             "type": "string"
           },
-          "description": {
+          "content": {
             "type": "string"
           }
         }
@@ -8064,7 +7526,7 @@
           "email": {
             "type": "string"
           },
-          "description": {
+          "content": {
             "type": "string"
           }
         }
@@ -8074,7 +7536,7 @@
           "id",
           "code",
           "iso",
-          "name"
+          "title"
         ],
         "properties": {
           "id": {
@@ -8086,7 +7548,7 @@
           "iso": {
             "type": "string"
           },
-          "name": {
+          "title": {
             "type": "string"
           }
         }
@@ -8095,7 +7557,7 @@
         "required": [
           "code",
           "iso",
-          "name"
+          "title"
         ],
         "properties": {
           "code": {
@@ -8104,7 +7566,7 @@
           "iso": {
             "type": "string"
           },
-          "name": {
+          "title": {
             "type": "string"
           }
         }
@@ -8201,7 +7663,7 @@
                   "type": "string"
                 }
               },
-              "description": {
+              "content": {
                 "type": "string"
               },
               "title": {
@@ -8215,13 +7677,13 @@
           "comment": {
             "required": [
               "id",
-              "description"
+              "content"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "description": {
+              "content": {
                 "type": "string"
               },
               "user": {
@@ -8344,13 +7806,13 @@
           "comments": {
             "required": [
               "id",
-              "description"
+              "content"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "description": {
+              "content": {
                 "type": "string"
               },
               "user": {
@@ -8372,10 +7834,10 @@
               "id": {
                 "type": "string"
               },
-              "names": {
+              "title": {
                 "type": "string"
               },
-              "descriptions": {
+              "content": {
                 "type": "string"
               }
             }
@@ -8388,14 +7850,20 @@
               "id": {
                 "type": "string"
               },
-              "cover": {
+              "title": {
                 "type": "string"
               },
-              "names": {
+              "summary": {
                 "type": "string"
               },
-              "descriptions": {
+              "content": {
                 "type": "string"
+              },
+              "attachments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -8508,7 +7976,7 @@
               }
             }
           },
-          "description": {
+          "content": {
             "type": "string"
           },
           "title": {
@@ -8551,7 +8019,7 @@
               "type": "string"
             }
           },
-          "description": {
+          "content": {
             "type": "string"
           },
           "title": {
@@ -8582,47 +8050,11 @@
           "group": {
             "type": "string"
           },
-          "names": {
-            "required": [
-              "id",
-              "key",
-              "value"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "key": {
-                "type": "string"
-              },
-              "language": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
-              }
-            }
+          "title": {
+            "type": "string"
           },
-          "descriptions": {
-            "required": [
-              "id",
-              "key",
-              "value"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "key": {
-                "type": "string"
-              },
-              "language": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
-              }
-            }
+          "content": {
+            "type": "string"
           }
         }
       },
@@ -8642,10 +8074,10 @@
           "group": {
             "type": "string"
           },
-          "names": {
+          "title": {
             "type": "string"
           },
-          "descriptions": {
+          "content": {
             "type": "string"
           }
         }
@@ -8742,7 +8174,7 @@
                   "type": "string"
                 }
               },
-              "description": {
+              "content": {
                 "type": "string"
               },
               "title": {
@@ -8773,120 +8205,21 @@
           "id": {
             "type": "string"
           },
-          "names": {
-            "required": [
-              "id",
-              "key",
-              "value"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "key": {
-                "type": "string"
-              },
-              "language": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
-              }
-            }
+          "title": {
+            "type": "string"
           },
-          "descriptions": {
-            "required": [
-              "id",
-              "key",
-              "value"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "key": {
-                "type": "string"
-              },
-              "language": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
-              }
-            }
+          "content": {
+            "type": "string"
           }
         }
       },
       "NewTags": {
         "properties": {
-          "names": {
+          "title": {
             "type": "string"
           },
-          "descriptions": {
+          "content": {
             "type": "string"
-          }
-        }
-      },
-      "Translates": {
-        "required": [
-          "id",
-          "key",
-          "value"
-        ],
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string",
-            "maxLength": 255,
-            "minLength": 1
-          },
-          "language": {
-            "required": [
-              "id",
-              "code",
-              "iso",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
-              "iso": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              }
-            }
-          },
-          "value": {
-            "type": "string",
-            "minLength": 1
-          }
-        }
-      },
-      "NewTranslates": {
-        "required": [
-          "key",
-          "value"
-        ],
-        "properties": {
-          "key": {
-            "type": "string",
-            "maxLength": 255,
-            "minLength": 1
-          },
-          "language": {
-            "type": "string"
-          },
-          "value": {
-            "type": "string",
-            "minLength": 1
           }
         }
       },
@@ -8982,7 +8315,7 @@
                   "type": "string"
                 }
               },
-              "description": {
+              "content": {
                 "type": "string"
               },
               "title": {
@@ -9280,9 +8613,6 @@
     },
     {
       "name": "Tags"
-    },
-    {
-      "name": "Translates"
     },
     {
       "name": "Views"

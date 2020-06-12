@@ -1,4 +1,7 @@
 {
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "contacts",
   "info": {
     "name": "Contacts"
   },
@@ -19,10 +22,8 @@
       "type": "email",
       "required": true
     },
-    "description": {
+    "content": {
       "type": "text"
     }
-  },
-  "connection": "default",
-  "collectionName": "contacts"
+  }
 }

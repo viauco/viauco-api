@@ -1,4 +1,5 @@
 {
+  "kind": "collectionType",
   "connection": "default",
   "collectionName": "settings",
   "info": {
@@ -24,11 +25,11 @@
       "required": true,
       "unique": true
     },
-    "names": {
-      "collection": "translates"
+    "title": {
+      "type": "string"
     },
-    "descriptions": {
-      "collection": "translates"
+    "content": {
+      "type": "text"
     }
   }
 }

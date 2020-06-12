@@ -10,17 +10,25 @@
     "timestamps": true
   },
   "attributes": {
-    "cover": {
-      "model": "file",
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "attachments": {
+      "collection": "file",
       "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
       "plugin": "upload",
       "required": false
-    },
-    "names": {
-      "collection": "translates"
-    },
-    "descriptions": {
-      "collection": "translates"
     }
   }
 }

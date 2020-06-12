@@ -10,11 +10,11 @@
     "timestamps": true
   },
   "attributes": {
-    "names": {
-      "collection": "translates"
+    "title": {
+      "type": "string"
     },
-    "descriptions": {
-      "collection": "translates"
+    "content": {
+      "type": "text"
     }
   }
 }

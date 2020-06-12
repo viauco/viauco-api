@@ -519,7 +519,7 @@
           "id",
           "code",
           "iso",
-          "name"
+          "title"
         ],
         "properties": {
           "id": {
@@ -531,7 +531,7 @@
           "iso": {
             "type": "string"
           },
-          "name": {
+          "title": {
             "type": "string"
           }
         }
@@ -540,7 +540,7 @@
         "required": [
           "code",
           "iso",
-          "name"
+          "title"
         ],
         "properties": {
           "code": {
@@ -549,7 +549,7 @@
           "iso": {
             "type": "string"
           },
-          "name": {
+          "title": {
             "type": "string"
           }
         }

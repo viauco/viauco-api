@@ -606,7 +606,7 @@
                   "type": "string"
                 }
               },
-              "description": {
+              "content": {
                 "type": "string"
               },
               "title": {

@@ -1,4 +1,5 @@
 {
+  "kind": "collectionType",
   "connection": "default",
   "collectionName": "languages",
   "info": {
@@ -19,7 +20,7 @@
       "required": true,
       "unique": true
     },
-    "name": {
+    "title": {
       "type": "string",
       "required": true
     }

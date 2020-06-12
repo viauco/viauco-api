@@ -608,13 +608,13 @@
           "comments": {
             "required": [
               "id",
-              "description"
+              "content"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "description": {
+              "content": {
                 "type": "string"
               },
               "user": {
@@ -636,10 +636,10 @@
               "id": {
                 "type": "string"
               },
-              "names": {
+              "title": {
                 "type": "string"
               },
-              "descriptions": {
+              "content": {
                 "type": "string"
               }
             }
@@ -652,14 +652,20 @@
               "id": {
                 "type": "string"
               },
-              "cover": {
+              "title": {
                 "type": "string"
               },
-              "names": {
+              "summary": {
                 "type": "string"
               },
-              "descriptions": {
+              "content": {
                 "type": "string"
+              },
+              "attachments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -772,7 +778,7 @@
               }
             }
           },
-          "description": {
+          "content": {
             "type": "string"
           },
           "title": {
@@ -815,7 +821,7 @@
               "type": "string"
             }
           },
-          "description": {
+          "content": {
             "type": "string"
           },
           "title": {

@@ -534,7 +534,7 @@
           "email": {
             "type": "string"
           },
-          "description": {
+          "content": {
             "type": "string"
           }
         }
@@ -555,7 +555,7 @@
           "email": {
             "type": "string"
           },
-          "description": {
+          "content": {
             "type": "string"
           }
         }

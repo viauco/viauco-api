@@ -534,47 +534,11 @@
           "group": {
             "type": "string"
           },
-          "names": {
-            "required": [
-              "id",
-              "key",
-              "value"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "key": {
-                "type": "string"
-              },
-              "language": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
-              }
-            }
+          "title": {
+            "type": "string"
           },
-          "descriptions": {
-            "required": [
-              "id",
-              "key",
-              "value"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "key": {
-                "type": "string"
-              },
-              "language": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
-              }
-            }
+          "content": {
+            "type": "string"
           }
         }
       },
@@ -594,10 +558,10 @@
           "group": {
             "type": "string"
           },
-          "names": {
+          "title": {
             "type": "string"
           },
-          "descriptions": {
+          "content": {
             "type": "string"
           }
         }

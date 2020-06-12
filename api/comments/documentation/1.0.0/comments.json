@@ -517,13 +517,13 @@
       "Comments": {
         "required": [
           "id",
-          "description"
+          "content"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "description": {
+          "content": {
             "type": "string"
           },
           "user": {
@@ -588,10 +588,10 @@
       },
       "NewComments": {
         "required": [
-          "description"
+          "content"
         ],
         "properties": {
-          "description": {
+          "content": {
             "type": "string"
           },
           "user": {

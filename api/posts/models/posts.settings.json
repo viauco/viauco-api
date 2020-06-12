@@ -52,7 +52,7 @@
       "collection": "views",
       "via": "post"
     },
-    "description": {
+    "content": {
       "type": "richtext"
     },
     "title": {
