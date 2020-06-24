@@ -31,15 +31,18 @@
     },
     "comments": {
       "collection": "comments",
-      "via": "related"
+      "via": "related",
+      "required": false
     },
     "tags": {
       "collection": "tags",
-      "via": "related"
+      "via": "related",
+      "required": true
     },
     "categories": {
       "collection": "categories",
-      "via": "related"
+      "via": "related",
+      "required": true
     },
     "attachments": {
       "collection": "file",
@@ -54,15 +57,18 @@
     },
     "likes": {
       "collection": "likes",
-      "via": "related"
+      "via": "related",
+      "required": false
     },
     "shares": {
       "collection": "shares",
-      "via": "related"
+      "via": "related",
+      "required": false
     },
     "views": {
       "collection": "views",
-      "via": "related"
+      "via": "related",
+      "required": false
     }
   }
 }

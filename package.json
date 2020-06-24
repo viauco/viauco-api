@@ -13,7 +13,7 @@
   "devDependencies": {},
   "dependencies": {
     "debug": "latest",
-    "knex": "<0.20.0",
+    "knex": "latest",
     "lodash": "latest",
     "mysql": "latest",
     "pg": "latest",

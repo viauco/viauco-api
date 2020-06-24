@@ -19,7 +19,7 @@
       "model": "user"
     },
     "related": {
-      "model": "*",
+      "collection": "*",
       "filter": "field"
     }
   }
