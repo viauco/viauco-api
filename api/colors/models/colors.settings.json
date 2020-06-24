@@ -1,25 +1,28 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "comments",
+  "collectionName": "colors",
   "info": {
-    "name": "Comments"
+    "name": "colors"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "content": {
-      "type": "text",
+    "name": {
+      "type": "string",
+      "private": false,
       "required": true
     },
-    "user": {
-      "plugin": "users-permissions",
-      "model": "user"
+    "content": {
+      "type": "string"
+    },
+    "hex": {
+      "type": "string"
     },
     "related": {
-      "model": "*",
+      "collection": "*",
       "filter": "field"
     }
   }

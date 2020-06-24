@@ -29,6 +29,10 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "related": {
+      "collection": "*",
+      "filter": "field"
     }
   }
 }

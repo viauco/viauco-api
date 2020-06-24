@@ -10,24 +10,36 @@
     "timestamps": true
   },
   "attributes": {
+    "title": {
+      "type": "string"
+    },
     "cover": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": true
     },
+    "summary": {
+      "type": "text"
+    },
+    "content": {
+      "type": "richtext"
+    },
     "user": {
       "plugin": "users-permissions",
       "model": "user"
     },
     "comments": {
-      "collection": "comments"
+      "collection": "comments",
+      "via": "related"
     },
     "tags": {
-      "collection": "tags"
+      "collection": "tags",
+      "via": "related"
     },
     "categories": {
-      "collection": "categories"
+      "collection": "categories",
+      "via": "related"
     },
     "attachments": {
       "collection": "file",
@@ -42,24 +54,15 @@
     },
     "likes": {
       "collection": "likes",
-      "via": "post"
+      "via": "related"
     },
     "shares": {
       "collection": "shares",
-      "via": "post"
+      "via": "related"
     },
     "views": {
       "collection": "views",
-      "via": "post"
-    },
-    "content": {
-      "type": "richtext"
-    },
-    "title": {
-      "type": "string"
-    },
-    "summary": {
-      "type": "text"
+      "via": "related"
     }
   }
 }

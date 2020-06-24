@@ -13,10 +13,12 @@
   "devDependencies": {},
   "dependencies": {
     "debug": "latest",
-    "lodash": "latest",
     "knex": "<0.20.0",
+    "lodash": "latest",
+    "mysql": "latest",
     "pg": "latest",
     "socket.io": "latest",
+    "sqlite3": "latest",
     "strapi": "latest",
     "strapi-admin": "latest",
     "strapi-connector-bookshelf": "latest",

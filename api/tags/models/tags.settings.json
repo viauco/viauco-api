@@ -15,6 +15,10 @@
     },
     "content": {
       "type": "text"
+    },
+    "related": {
+      "collection": "*",
+      "filter": "field"
     }
   }
 }

@@ -14,13 +14,9 @@
       "plugin": "users-permissions",
       "model": "user"
     },
-    "post": {
-      "via": "likes",
-      "model": "posts"
-    },
-    "comment": {
-      "via": "likes",
-      "model": "comments"
+    "related": {
+      "model": "*",
+      "filter": "field"
     }
   }
 }

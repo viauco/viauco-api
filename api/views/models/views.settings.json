@@ -14,9 +14,9 @@
       "plugin": "users-permissions",
       "model": "user"
     },
-    "post": {
-      "via": "views",
-      "model": "posts"
+    "related": {
+      "model": "*",
+      "filter": "field"
     }
   }
 }

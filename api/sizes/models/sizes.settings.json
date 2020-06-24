@@ -1,25 +1,28 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "comments",
+  "collectionName": "sizes",
   "info": {
-    "name": "Comments"
+    "name": "sizes"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "content": {
-      "type": "text",
-      "required": true
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
     },
-    "user": {
-      "plugin": "users-permissions",
-      "model": "user"
+    "content": {
+      "type": "string"
+    },
+    "size": {
+      "type": "decimal"
     },
     "related": {
-      "model": "*",
+      "collection": "*",
       "filter": "field"
     }
   }
