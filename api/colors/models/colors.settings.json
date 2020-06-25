@@ -13,13 +13,16 @@
     "name": {
       "type": "string",
       "private": false,
-      "required": true
+      "required": true,
+      "unique": true
     },
     "content": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "hex": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "related": {
       "collection": "*",

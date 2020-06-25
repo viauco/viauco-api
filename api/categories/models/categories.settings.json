@@ -10,14 +10,18 @@
     "timestamps": true
   },
   "attributes": {
-    "title": {
-      "type": "string"
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "summary": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "content": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "attachments": {
       "collection": "file",

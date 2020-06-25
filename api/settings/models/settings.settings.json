@@ -17,13 +17,11 @@
     },
     "value": {
       "type": "text",
-      "required": true,
-      "unique": true
+      "required": true
     },
     "group": {
       "type": "string",
-      "required": true,
-      "unique": true
+      "required": true
     },
     "title": {
       "type": "string"

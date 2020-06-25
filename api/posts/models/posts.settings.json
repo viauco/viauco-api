@@ -11,7 +11,8 @@
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "cover": {
       "model": "file",
@@ -20,14 +21,17 @@
       "required": true
     },
     "summary": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "content": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "user": {
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "required": true
     },
     "comments": {
       "collection": "comments",

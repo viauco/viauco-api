@@ -10,11 +10,14 @@
     "timestamps": true
   },
   "attributes": {
-    "title": {
-      "type": "string"
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "content": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "related": {
       "collection": "*",

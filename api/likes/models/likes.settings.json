@@ -12,7 +12,8 @@
   "attributes": {
     "user": {
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "required": true
     },
     "related": {
       "model": "*",

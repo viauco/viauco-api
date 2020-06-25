@@ -16,10 +16,12 @@
       "unique": true
     },
     "content": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "size": {
-      "type": "decimal"
+      "type": "decimal",
+      "required": true
     },
     "related": {
       "collection": "*",
