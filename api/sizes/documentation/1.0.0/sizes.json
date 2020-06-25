@@ -531,6 +531,16 @@
           },
           "size": {
             "type": "number"
+          },
+          "related": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -547,6 +557,9 @@
           },
           "size": {
             "type": "number"
+          },
+          "related": {
+            "type": "string"
           }
         }
       }

@@ -24,7 +24,6 @@
     "strapi-connector-bookshelf": "latest",
     "strapi-plugin-content-manager": "latest",
     "strapi-plugin-content-type-builder": "latest",
-    "strapi-plugin-documentation": "latest",
     "strapi-plugin-email": "latest",
     "strapi-plugin-graphql": "latest",
     "strapi-plugin-upload": "latest",

@@ -517,10 +517,15 @@
       "Posts": {
         "required": [
           "id",
-          "cover"
+          "cover",
+          "tags",
+          "categories"
         ],
         "properties": {
           "id": {
+            "type": "string"
+          },
+          "title": {
             "type": "string"
           },
           "cover": {
@@ -569,6 +574,12 @@
               }
             }
           },
+          "summary": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
           "user": {
             "required": [
               "id",
@@ -606,64 +617,76 @@
             }
           },
           "comments": {
-            "required": [
-              "id",
-              "content"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "content": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "likes": {
-                "type": "array",
-                "items": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "content"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "related": {
                   "type": "string"
                 }
               }
             }
           },
           "tags": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "content": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "related": {
+                  "type": "string"
+                }
               }
             }
           },
           "categories": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "summary": {
-                "type": "string"
-              },
-              "content": {
-                "type": "string"
-              },
-              "attachments": {
-                "type": "array",
-                "items": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "summary": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "related": {
                   "type": "string"
                 }
               }
@@ -731,10 +754,7 @@
                 "user": {
                   "type": "string"
                 },
-                "post": {
-                  "type": "string"
-                },
-                "comment": {
+                "related": {
                   "type": "string"
                 }
               }
@@ -753,7 +773,7 @@
                 "user": {
                   "type": "string"
                 },
-                "post": {
+                "related": {
                   "type": "string"
                 }
               }
@@ -772,36 +792,49 @@
                 "user": {
                   "type": "string"
                 },
-                "post": {
+                "related": {
                   "type": "string"
                 }
               }
             }
-          },
-          "content": {
-            "type": "string"
-          },
+          }
+        }
+      },
+      "NewPosts": {
+        "required": [
+          "tags",
+          "categories"
+        ],
+        "properties": {
           "title": {
             "type": "string"
           },
           "summary": {
             "type": "string"
-          }
-        }
-      },
-      "NewPosts": {
-        "properties": {
+          },
+          "content": {
+            "type": "string"
+          },
           "user": {
             "type": "string"
           },
           "comments": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "tags": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "categories": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "likes": {
             "type": "array",
@@ -820,15 +853,6 @@
             "items": {
               "type": "string"
             }
-          },
-          "content": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "summary": {
-            "type": "string"
           }
         }
       }

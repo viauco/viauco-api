@@ -558,85 +558,13 @@
               }
             }
           },
-          "post": {
+          "related": {
             "required": [
-              "id",
-              "cover"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
-              },
-              "cover": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "comments": {
-                "type": "string"
-              },
-              "tags": {
-                "type": "string"
-              },
-              "categories": {
-                "type": "string"
-              },
-              "attachments": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "likes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "shares": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "views": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "content": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "summary": {
-                "type": "string"
-              }
-            }
-          },
-          "comment": {
-            "required": [
-              "id",
-              "content"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "content": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "likes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               }
             }
           }
@@ -647,10 +575,7 @@
           "user": {
             "type": "string"
           },
-          "post": {
-            "type": "string"
-          },
-          "comment": {
+          "related": {
             "type": "string"
           }
         }

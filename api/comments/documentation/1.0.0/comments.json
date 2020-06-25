@@ -562,25 +562,13 @@
               }
             }
           },
-          "likes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "post": {
-                  "type": "string"
-                },
-                "comment": {
-                  "type": "string"
-                }
+          "related": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
               }
             }
           }
@@ -597,11 +585,8 @@
           "user": {
             "type": "string"
           },
-          "likes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "related": {
+            "type": "string"
           }
         }
       }
