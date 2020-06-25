@@ -12,7 +12,6 @@
   "attributes": {
     "name": {
       "type": "string",
-      "private": false,
       "required": true,
       "unique": true
     },
