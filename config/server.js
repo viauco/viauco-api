@@ -1,5 +1,5 @@
 module.exports = ({ env }) => ({
-  host: '0.0.0.0',
+  host: process.env.HOST || '127.0.0.1',
   port: process.env.PORT || 1337,
   cron:{
     enable: env.bool('CRON_ENABLE', false)
