@@ -18,7 +18,8 @@
     "related": {
       "model": "*",
       "filter": "field",
-      "private": true
+      "private": true,
+      "autoPopulate": false
     }
   }
 }

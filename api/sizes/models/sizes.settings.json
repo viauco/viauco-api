@@ -26,7 +26,8 @@
     "related": {
       "collection": "*",
       "filter": "field",
-      "private": true
+      "private": true,
+      "autoPopulate": false
     }
   }
 }

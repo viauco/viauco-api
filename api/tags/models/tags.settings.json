@@ -21,7 +21,9 @@
     },
     "related": {
       "collection": "*",
-      "filter": "field"
+      "filter": "field",
+      "private": true,
+      "autoPopulate": false
     }
   }
 }
