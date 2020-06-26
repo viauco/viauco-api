@@ -8,8 +8,8 @@
     "dev": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "clean": "rm -rf node_modules && rm -rf .cache && rm -rf build", 
-    "reinstall": "npm run clean && npm install", 
+    "clean": "rm -rf node_modules && rm -rf .cache && rm -rf build",
+    "reinstall": "npm run clean && npm install",
     "rebuild": "npm run clean && npm install && npm run build",
     "strapi": "strapi"
   },
@@ -25,6 +25,7 @@
     "strapi": "latest",
     "strapi-admin": "latest",
     "strapi-connector-bookshelf": "latest",
+    "strapi-middleware-cache": "^1.0.5",
     "strapi-plugin-content-manager": "latest",
     "strapi-plugin-content-type-builder": "latest",
     "strapi-plugin-email": "latest",

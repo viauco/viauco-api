@@ -59,6 +59,10 @@ module.exports = {
         enabled: false,
         whiteList: [],
         blackList: []
-      }
+      },
+      cache: {
+        enabled: true,
+        models: ['categories', 'colors', 'settings', 'sizes', 'tags', 'posts'],
+      },
     },
 };
