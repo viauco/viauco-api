@@ -28,7 +28,10 @@
     "strapi-plugin-graphql": "latest",
     "strapi-plugin-upload": "latest",
     "strapi-plugin-users-permissions": "latest",
+    "strapi-provider-upload-aws-s3": "latest",
+    "strapi-provider-upload-cloudinary": "latest",
     "strapi-provider-upload-firebase": "latest",
+    "strapi-provider-upload-google-cloud-storage": "^3.0.1",
     "strapi-utils": "latest"
   },
   "author": {

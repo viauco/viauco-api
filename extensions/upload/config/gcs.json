@@ -1,0 +1,8 @@
+{  
+    "provider": "google-cloud-storage",  
+    "providerOptions": {
+      "serviceAccount": "YOUR GCS SERVICE ACCOUNT JSON",
+      "bucketName": "YOUR GCS BUCKET NAME",
+      "baseUrl": "https://storage.googleapis.com/YOUR GCS BUCKET NAME"  
+    }
+}

@@ -1,0 +1,21 @@
+{  
+    "provider": "google-cloud-storage",  
+    "providerOptions": {
+      "serviceAccount": {
+        "type": "service_account",
+        "project_id": "bustling-flux-241402",
+        "private_key_id": "0821ac3b8e53dbce2942f8fdab8cdb84342e9a49",
+        "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDAO7d8e8w27fHN\n1jHajSc8eQa4g8N+7+SwHhocpgKI20bd+2juJ3l9bFfe4pQ5jNf29ssC7PVNWhu6\nXR76HIezVwkitBZ4G23u1N6n9zEwaB3sKJfsqjhQbZA3bw/LN1DjspQRXEaT0Q6T\n9HijUtFdQIAs33Q3SGBLn5gKmy7eqOG1dwBOJp2c+azqnc9SHj3tGGJVwPr2y2sh\nex+mI+CXzYKQ4C12dw8h5Rmjed84wjXkvE+SbJmFjM+absiYQ1qLeY322Y3hzwyK\nxaJflBj2NxTtJBwaGXvTWTsWCcD0CPcKbTEomGT+CtusC0egLeor1dChDcPHuswO\nTqefiInTAgMBAAECggEACOhbfXBhIKR7AXOXoM3MpSU4i1aeZE8/yhdtqf6D/I0o\npgL53vCY/8JZpLGGy887zK0CmufvCqljwomBH3bbT5NMuufHE2618+IM+pHeR3oe\nSiysCY1DtG+3Reemvt8ZJ6FFR4lT7efl5IjotCy+GIjzcjYyikNCJGRIpSksDVOH\nu2CIdNAWs0gQ6kZcBG0MzeZIbLeNOL9W/ym6PPbearJa1glpMwtyEFeKspBVxGyC\n71NDoG+MDjTCgmtC9LaFGXk2YYJZXaRMCuq3apbjWaE55qqSpZj6NFVvJuOXQK8/\numbFdUK25AfZIMD6l+c0x6+iWxWwmXGdMSXWBnHo6QKBgQD0b1Y300/5wbeGKPzx\nF8hZ4N7G4RG313d1CzQGKpBthoOySIBNAvcRptVqRACciPqZ+S2MwzO7hYf4xxA3\nyESaC7Fp0oel4FkalSkTayVVdbxnaGMDrgvu1EXZF2hSUexO4SkQ/UzZnkB5wUr4\nurkZBwb5oQS+i6SfXODCo6s1OQKBgQDJVBloMi77zfyv4YpOxStQlgujJ7GyrhiY\nPBEO/9+J68Cvf/LNi0KHC5+/YXdLMWg1lOkI1JpCtxo0ZVK7eDbpE0cQibKJaOGM\n7IN6y7gQ8UOSe18LSQfSNQsGQDVSV4zH8WsjuJQgaDNDrGO4Jxl22vSvr0JwsJU+\nLU2mWsajawKBgQDayRz+8uFOyBmgt+dPVN47tI8yrBnT18RQuyphqo+DuTb/yO0u\nAU1sO0wixaNWeTT1xJcEu2P+oNLH1kWp6FOfHoA6G/rWeizHImOVwf20tKFiXYji\nrlJ3/wBWBCGYLUO6hsbfMhorXv6O/HhCkb9Dq4qOvZUliJBdJCD5ls2T4QKBgHqa\nUlaXqPEDAgyBht5tR/FtTmzvMVGkn6mleqXtwE2XWeIGQvBVDBB9Ta0YR7NsxQ9M\nPZV5Eu/p3XVm9rjffmD1smMp16XCTwiox3CyOsdmhUXhB4Ix2Sdz0eDenRol4r+o\nDxzTvLD3g7CEfL2aYfF1aWjLi+RgRKJ2qEDUKv89AoGAS3Z+HjFN3np5zmUVCaKy\n3CG0aOxnZHAKWT1rKoaK33l9rmFjur7JyB3DwlK7RjuUDVNjojojbprjeh2TxxMg\nltUDpdl8hLkJ/bV+Us7y7jEKAmFWftjIuy1WDAFux7Qd+KudRRSDgH2OTiK3Av5B\nHMwRGe+fg290FaEJj3BKEy8=\n-----END PRIVATE KEY-----\n",
+        "client_email": "viauco-api-upload@bustling-flux-241402.iam.gserviceaccount.com",
+        "client_id": "101436095593306406368",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/viauco-api-upload%40bustling-flux-241402.iam.gserviceaccount.com"
+      },
+      "bucketName": "bustling-flux-241402.appspot.com",
+      "baseUrl": "https://storage.googleapis.com/bustling-flux-241402.appspot.com",
+      "basePath": "/",
+      "publicFiles": true
+    }
+}
