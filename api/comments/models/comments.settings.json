@@ -20,7 +20,8 @@
     },
     "related": {
       "model": "*",
-      "filter": "field"
+      "filter": "field",
+      "private": true
     }
   }
 }
