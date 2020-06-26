@@ -11,6 +11,8 @@
  */
 
 module.exports = () => {
-    const io = require('../../plugins/socket')(strapi.server);
-    strapi.io = io;
+    process.nextTick(() => {
+        const io = require('../../plugins/socket')(strapi.server);
+        strapi.io = io;
+    });
 };

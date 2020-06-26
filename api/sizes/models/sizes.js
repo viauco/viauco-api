@@ -7,75 +7,71 @@ const { default: createStrapi } = require("strapi");
  */
 
 module.exports = {
-  // Before saving a value.
-  // Fired before an `insert` or `update` query.
-  beforeSave: async (model, attrs, options) => {
-    strapi.io.emit('size_before_save', {model, attrs, options})
-  },
+    
+    lifecycles: {
+    
+        beforeFind(params, populate) {
+            strapi.io.emit('size_before_find', {params, populate})
+        },
 
-  // After saving a value.
-  // Fired after an `insert` or `update` query.
-  afterSave: async (model, response, options) => {
-    strapi.io.emit('size_after_save', {model, response, options})
-  },
+        afterFind(results, params, populate) {
+            strapi.io.emit('size_after_find', {results, params, populate})
+        },
 
-  // Before fetching a value.
-  // Fired before a `fetch` operation.
-  beforeFetch: async (model, columns, options) => {
-    strapi.io.emit('size_before_fetch', {model, columns, options})
-  },
+        beforeFindOne(params, populate) {
+            strapi.io.emit('size_before_find_one', {params, populate})
+        },
 
-  // After fetching a value.
-  // Fired after a `fetch` operation.
-  afterFetch: async (model, response, options) => {
-    strapi.io.emit('size_after_fetch', {model, response, options})
-  },
+        afterFindOne(result, params, populate) {
+            strapi.io.emit('size_after_find_one', {result, params, populate})
+        },
 
-  // Before fetching all values.
-  // Fired before a `fetchAll` operation.
-  beforeFetchAll: async (model, columns, options) => {
-    strapi.io.emit('size_before_fetch_all', {model, columns, options})
-  },
+        beforeCreate(data) {
+            strapi.io.emit('size_before_create', {data})
+        },
 
-  // After fetching all values.
-  // Fired after a `fetchAll` operation.
-  afterFetchAll: async (model, response, options) => {
-    strapi.io.emit('size_after_fetch_all', {model, response, options})
-  },
+        afterCreate(result, data) {
+            strapi.io.emit('size_after_create', {result, data})
+        },
 
-  // Before creating a value.
-  // Fired before an `insert` query.
-  beforeCreate: async (model, attrs, options) => {
-    strapi.io.emit('size_before_create', {model, attrs, options})
-  },
+        beforeUpdate(params, data) {
+            strapi.io.emit('size_before_update', {params, data})
+        },
 
-  // After creating a value.
-  // Fired after an `insert` query.
-  afterCreate: async (model, attrs, options) => {
-    strapi.io.emit('size_after_create', {model, attrs, options})
-  },
+        afterUpdate(result, params, data) {
+            strapi.io.emit('size_after_update', {result, params, data})
+        },
 
-  // Before updating a value.
-  // Fired before an `update` query.
-  beforeUpdate: async (model, attrs, options) => {
-    strapi.io.emit('size_before_update', {model, attrs, options})
-  },
+        beforeDelete(params) {
+            strapi.io.emit('size_before_delete', {params})
+        },
 
-  // After updating a value.
-  // Fired after an `update` query.
-  afterUpdate: async (model, attrs, options) => {
-    strapi.io.emit('size_after_update', {model, attrs, options})
-  },
+        afterDelete(result, params) {
+            strapi.io.emit('size_after_delete', {result, params})
+        },
 
-  // Before destroying a value.
-  // Fired before a `delete` query.
-  beforeDestroy: async (model, attrs, options) => {
-    strapi.io.emit('size_before_destroy', {model, attrs, options})
-  },
+        beforeCount(params) {
+            strapi.io.emit('size_before_count', {params})
+        },
 
-  // After destroying a value.
-  // Fired after a `delete` query.
-  afterDestroy: async (model, attrs, options) => {
-    strapi.io.emit('size_after_destroy', {model, attrs, options})
-  }
+        afterCount(result, params) {
+            strapi.io.emit('size_after_count', {result, params})
+        },
+
+        beforeSearch(params, populate) {
+            strapi.io.emit('size_before_search', {params, populate})
+        },
+
+        afterSearch(result, params) {
+            strapi.io.emit('size_after_search', {result, params})
+        },
+
+        beforeCountSearch(params) {
+            strapi.io.emit('size_before_count_search', {params})
+        },
+
+        afterCountSearch(result, params) {
+            strapi.io.emit('size_after_count_search', {result, params})
+        }
+    }
 };

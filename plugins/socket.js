@@ -13,7 +13,7 @@ module.exports = (server) => {
         // listen for user diconnect
         socket.on('disconnect', () => {
             users = _.reject(users, (u) => {
-                return u.socket.user_id == socket.user_id;
+                return u.user_id == socket.user_id;
             });
         });
     });

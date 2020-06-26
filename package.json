@@ -37,9 +37,6 @@
   "author": {
     "name": "Author"
   },
-  "strapi": {
-    "uuid": "bf21d30a-358d-416d-abba-9c58c0445a14"
-  },
   "engines": {
     "node": ">=10.0.0",
     "npm": ">=6.0.0"
