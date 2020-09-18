@@ -1,0 +1,27 @@
+version: '3'
+services:
+  app:
+    build: .
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_NAME: pg_app_db
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: pg_app_user
+      DATABASE_PASSWORD: pg_app_password
+    links:
+      - postgres:postgres
+    volumes:
+      - ./app:/var/www/app
+    ports:
+      - '1337:1337'
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: pg_app_user
+      POSTGRES_PASSWORD: pg_app_password
+    volumes:
+      - ./data:/data/postgres
+    ports:
+      - '5432:5432'
