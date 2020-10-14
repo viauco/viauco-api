@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: app_user
+      POSTGRES_PASSWORD: app_password
+      POSTGRES_DB: app_db
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    networks:
+      - viauco-app-network
+    ports:
+      - '5432:5432'
+  app:
+    build:
+      context: .
+    environment:
+      DB: postgres
+      DATABASE_NAME: app_db
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: app_user
+      DATABASE_PASSWORD: app_password
+    depends_on:
+      - postgres
+    networks:
+      - viauco-app-network
+    ports:
+      - '1337:1337'
+
+networks:
+  viauco-app-network:
+    driver: bridge
