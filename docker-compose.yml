@@ -24,8 +24,6 @@ services:
       DATABASE_PORT: 5432
       DATABASE_USERNAME: app_user
       DATABASE_PASSWORD: app_password
-    volumes: 
-      - ./src:/app
     depends_on:
       - postgres
     networks:
@@ -47,7 +45,7 @@ services:
       - '80:80'
       - '443:443'
       - '7000:7000'
-      - '5433:5432'
+      - '5434:5434'
 
 networks:
   viauco-app-network:
