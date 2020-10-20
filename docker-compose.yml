@@ -14,7 +14,7 @@ services:
       - viauco-app-network
     ports:
       - '5432:5432'
-  app:
+  api_1:
     build:
       context: .
     environment:
@@ -31,11 +31,29 @@ services:
     ports:
       - '1337:1337'
 
+  api_2:
+    build:
+      context: .
+    environment:
+      DB: postgres
+      DATABASE_NAME: app_db
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: app_user
+      DATABASE_PASSWORD: app_password
+    depends_on:
+      - postgres
+    networks:
+      - viauco-app-network
+    ports:
+      - '1338:1337'
+
   haproxy:
     image: haproxy
     restart: always
     depends_on:
-      - app
+      - api_1
+      - api_2
       - postgres
     volumes: 
       - ./docker/haproxy:/usr/local/etc/haproxy
