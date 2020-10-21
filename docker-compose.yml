@@ -1,80 +1,71 @@
 version: '3.8'
+
+x-build-app: &build-app
+  build:
+    context: .
+  environment:
+    DB: postgres
+    DATABASE_NAME: app_db
+    DATABASE_HOST: postgres
+    DATABASE_PORT: 5432
+    DATABASE_USERNAME: app_user
+    DATABASE_PASSWORD: app_password
+  depends_on:
+    - postgres
+  networks:
+    - viauco-app-network
+
+x-build-haproxy: &build-haproxy
+  image: haproxy
+  restart: always
+  depends_on:
+    - api_1
+    - api_2
+    - postgres
+  volumes: 
+    - ./docker/haproxy:/usr/local/etc/haproxy
+  networks:
+    - viauco-app-network
+
+x-build-postgres: &build-postgres
+  image: postgres
+  restart: always
+  environment:
+    POSTGRES_USER: app_user
+    POSTGRES_PASSWORD: app_password
+    POSTGRES_DB: app_db
+    PGDATA: /var/lib/postgresql/data
+
 services:
   postgres:
-    image: postgres
-    restart: always
-    environment:
-      POSTGRES_USER: app_user
-      POSTGRES_PASSWORD: app_password
-      POSTGRES_DB: app_db
-      PGDATA: /var/lib/postgresql/data
+    <<: *build-postgres
     volumes:
       - ./docker/db:/var/lib/postgresql/data
     networks:
       - viauco-app-network
     ports:
       - '5432:5432'
+
   api_1:
-    build:
-      context: .
-    environment:
-      DB: postgres
-      DATABASE_NAME: app_db
-      DATABASE_HOST: postgres
-      DATABASE_PORT: 5432
-      DATABASE_USERNAME: app_user
-      DATABASE_PASSWORD: app_password
-    depends_on:
-      - postgres
-    networks:
-      - viauco-app-network
+    <<: *build-app
     ports:
       - '1337:1337'
 
   api_2:
-    build:
-      context: .
-    environment:
-      DB: postgres
-      DATABASE_NAME: app_db
-      DATABASE_HOST: postgres
-      DATABASE_PORT: 5432
-      DATABASE_USERNAME: app_user
-      DATABASE_PASSWORD: app_password
-    depends_on:
-      - postgres
-    networks:
-      - viauco-app-network
+    <<: *build-app
     ports:
       - '1338:1337'
 
   haproxy_master:
-    image: haproxy
-    restart: always
-    depends_on:
-      - api_1
-      - api_2
-      - postgres
-    volumes: 
-      - ./docker/haproxy:/usr/local/etc/haproxy
-    networks:
-      - viauco-app-network
+    <<: *build-haproxy
     ports:
       - '80:80'
       - '443:443'
       - '7000:7000'
       - '5434:5434'
+
   haproxy_slave:
-    image: haproxy
-    restart: always
-    depends_on:
-      - api_1
-      - api_2
-      - postgres
-    volumes: 
-      - ./docker/haproxy:/usr/local/etc/haproxy
-    networks:
-      - viauco-app-network
+    <<: *build-haproxy
     ports:
       - '8080:80'
       - '4433:443'
