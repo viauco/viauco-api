@@ -48,7 +48,7 @@ services:
     ports:
       - '1338:1337'
 
-  haproxy:
+  haproxy_master:
     image: haproxy
     restart: always
     depends_on:
@@ -64,6 +64,22 @@ services:
       - '443:443'
       - '7000:7000'
       - '5434:5434'
+  haproxy_slave:
+    image: haproxy
+    restart: always
+    depends_on:
+      - api_1
+      - api_2
+      - postgres
+    volumes: 
+      - ./docker/haproxy:/usr/local/etc/haproxy
+    networks:
+      - viauco-app-network
+    ports:
+      - '8080:80'
+      - '4433:443'
+      - '7001:7000'
+      - '5435:5434'
 
 networks:
   viauco-app-network:
