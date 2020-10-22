@@ -10,6 +10,9 @@ x-build-app: &build-app
     DATABASE_PORT: 5432
     DATABASE_USERNAME: app_user
     DATABASE_PASSWORD: app_password
+  volumes:
+    - app:/app
+    - node_modules:/app/node_modules/
   depends_on:
     - postgres
   networks:
@@ -83,3 +86,15 @@ volumes:
       type: none
       o: bind
       device: $PWD/docker/pgsql
+  app:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: $PWD/src
+  node_modules:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: $PWD/docker/node_modules

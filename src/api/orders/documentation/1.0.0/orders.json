@@ -537,6 +537,12 @@
           "status": {
             "type": "integer",
             "default": 0
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
           }
         }
       }

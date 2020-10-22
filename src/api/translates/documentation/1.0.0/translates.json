@@ -548,6 +548,12 @@
               },
               "name": {
                 "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -574,6 +580,12 @@
           "value": {
             "type": "string",
             "minLength": 1
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
           }
         }
       }
