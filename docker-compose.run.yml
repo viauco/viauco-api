@@ -1,0 +1,86 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: app_user
+      POSTGRES_PASSWORD: app_password
+      POSTGRES_DB: app_db
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - ./docker/db:/var/lib/postgresql/data
+    networks:
+      - viauco-app-network
+    ports:
+      - '5432:5432'
+  api_1:
+    build:
+      context: .
+    environment:
+      DB: postgres
+      DATABASE_NAME: app_db
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: app_user
+      DATABASE_PASSWORD: app_password
+    depends_on:
+      - postgres
+    networks:
+      - viauco-app-network
+    ports:
+      - '1337:1337'
+
+  api_2:
+    build:
+      context: .
+    environment:
+      DB: postgres
+      DATABASE_NAME: app_db
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: app_user
+      DATABASE_PASSWORD: app_password
+    depends_on:
+      - postgres
+    networks:
+      - viauco-app-network
+    ports:
+      - '1338:1337'
+
+  haproxy_master:
+    image: haproxy
+    restart: always
+    depends_on:
+      - api_1
+      - api_2
+      - postgres
+    volumes: 
+      - ./docker/haproxy:/usr/local/etc/haproxy
+    networks:
+      - viauco-app-network
+    ports:
+      - '80:80'
+      - '443:443'
+      - '7000:7000'
+      - '5434:5434'
+  haproxy_slave:
+    image: haproxy
+    restart: always
+    depends_on:
+      - api_1
+      - api_2
+      - postgres
+    volumes: 
+      - ./docker/haproxy:/usr/local/etc/haproxy
+    networks:
+      - viauco-app-network
+    ports:
+      - '8080:80'
+      - '4433:443'
+      - '7001:7000'
+      - '5435:5434'
+
+networks:
+  viauco-app-network:
+    driver: bridge
