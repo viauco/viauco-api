@@ -40,7 +40,7 @@ services:
   postgres:
     <<: *build-postgres
     volumes:
-      - ./docker/db:/var/lib/postgresql/data:rw
+      - pgsql-db:/var/lib/postgresql/data:rw
     networks:
       - viauco-app-network
     ports:
@@ -75,3 +75,11 @@ services:
 networks:
   viauco-app-network:
     driver: bridge
+
+volumes:
+  pgsql-db:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: $PWD/docker/pgsql
