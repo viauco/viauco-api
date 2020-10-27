@@ -1,8 +1,11 @@
 version: '3.8'
 
-x-build-app: &build-app
+x-build-app-image: &x-build-app-image
   build:
     context: .
+
+x-build-app: &build-app
+  restart: always
   environment:
     DB: postgres
     DATABASE_NAME: app_db
@@ -26,13 +29,15 @@ x-build-haproxy: &build-haproxy
     - api_2
     - postgres
   volumes: 
-    - ./docker/haproxy:/usr/local/etc/haproxy
+    - haproxy:/usr/local/etc/haproxy
   networks:
     - viauco-app-network
 
 x-build-postgres: &build-postgres
   image: postgres
   restart: always
+  networks:
+      - viauco-app-network
   environment:
     POSTGRES_USER: app_user
     POSTGRES_PASSWORD: app_password
@@ -44,17 +49,17 @@ services:
     <<: *build-postgres
     volumes:
       - pgsql-db:/var/lib/postgresql/data:rw
-    networks:
-      - viauco-app-network
     ports:
       - '5432:5432'
 
   api_1:
+    <<: *x-build-app-image
     <<: *build-app
     ports:
       - '1337:1337'
 
   api_2:
+    <<: *x-build-app-image
     <<: *build-app
     ports:
       - '1338:1337'
@@ -98,3 +103,9 @@ volumes:
       type: none
       o: bind
       device: $PWD/docker/node_modules
+  haproxy:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: $PWD/docker/haproxy
