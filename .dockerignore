@@ -14,6 +14,7 @@ docker-compose.yml
 
 # NPM dependencies
 node_modules
+docker/node_modules
 
 # Other
 .editorconfig

@@ -1,0 +1,45 @@
+{
+  "name": "viauco-api",
+  "private": true,
+  "version": "1.0.1",
+  "description": "Api application",
+  "scripts": {
+    "develop": "strapi develop",
+    "dev": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "exports": {
+    "./": "./src/"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "strapi": "3.2.5",
+    "strapi-admin": "3.2.5",
+    "strapi-utils": "3.2.5",
+    "strapi-plugin-content-type-builder": "3.2.5",
+    "strapi-plugin-content-manager": "3.2.5",
+    "strapi-plugin-users-permissions": "3.2.5",
+    "strapi-plugin-email": "3.2.5",
+    "strapi-plugin-upload": "3.2.5",
+    "strapi-connector-bookshelf": "3.2.5",
+    "knex": "<0.20.0",
+    "pg": "latest",
+    "socket.io": "latest",
+    "strapi-plugin-documentation": "3.2.5",
+    "strapi-plugin-graphql": "3.2.5",
+    "strapi-provider-upload-firebase": "latest"
+  },
+  "author": {
+    "name": "Viauco"
+  },
+  "strapi": {
+    "uuid": true
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

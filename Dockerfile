@@ -5,21 +5,21 @@ COPY src/package*.json ./
 
 # ---- Dependencies ----
 FROM base AS dependencies
-RUN npm set progress=false && npm config set depth 0
 RUN npm install
-RUN npm audit fix
-RUN cp -R node_modules prod_node_modules
+RUN npm prune
+COPY prune.sh .
+COPY src/ .
+RUN chmod +x ./prune.sh
+RUN ./prune.sh
+
+# --- app ----
+FROM dependencies AS app
+EXPOSE 1337
 
 #dev
-FROM dependencies AS dev
-RUN npm install sqlite3 --save
-COPY src/ .
-EXPOSE 1337
+FROM app AS dev
 CMD [ "npm", "run", "dev" ]
 
 #production
-FROM dependencies AS prod
-COPY --from=dependencies /app/prod_node_modules ./node_modules
-COPY src/ .
-EXPOSE 1337
+FROM app AS prod
 CMD [ "npm", "run", "start" ]
